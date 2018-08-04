@@ -5,19 +5,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * <p>
+ * 用户信息表 前端控制器
+ * </p>
+ *
+ * @author 纪佳鸿
+ * @since 2018-08-03
+ */
 @RestController
-public class SampleController {
-    @RequestMapping("/")
-    String home() {
-        return "Hello World!";
-    }
-
-
+@RequestMapping("/user")
+public class UserController {
     @Autowired
     private UserService userService;
 
     @RequestMapping("/getList")
-    public String getList() {//测试mybatisplus取数据 2018-08-04 09:39:17
+    public String getList() {
         return userService.selectList(null).toString();
     }
+
 }

@@ -1,0 +1,33 @@
+<?mapper version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cdc.blinddate.mapper.UserMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.cdc.blinddate.entity.User">
+		<id column="id" property="id" />
+		<result column="username" property="username" />
+		<result column="password" property="password" />
+		<result column="name" property="name" />
+		<result column="sex" property="sex" />
+		<result column="mobile" property="mobile" />
+		<result column="birthday" property="birthday" />
+		<result column="folk" property="folk" />
+		<result column="height" property="height" />
+		<result column="weight" property="weight" />
+		<result column="education" property="education" />
+		<result column="university" property="university" />
+		<result column="housing_conditions" property="housingConditions" />
+		<result column="child" property="child" />
+		<result column="department" property="department" />
+		<result column="original_province" property="originalProvince" />
+		<result column="original_city" property="originalCity" />
+		<result column="current_province" property="currentProvince" />
+		<result column="current_city" property="currentCity" />
+		<result column="hobby" property="hobby" />
+		<result column="life_attitude" property="lifeAttitude" />
+		<result column="create_time" property="createTime" />
+		<result column="last_login_time" property="lastLoginTime" />
+		<result column="status" property="status" />
+	</resultMap>
+
+</mapper>
