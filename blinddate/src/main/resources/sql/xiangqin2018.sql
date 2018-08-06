@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50626
 File Encoding         : 65001
 
-Date: 2018-08-04 10:44:41
+Date: 2018-08-06 09:44:58
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -41,8 +41,8 @@ CREATE TABLE `user` (
   `current_city` varchar(32) DEFAULT NULL COMMENT '当前城市',
   `hobby` varchar(255) DEFAULT NULL COMMENT '兴趣爱好',
   `life_attitude` varchar(255) DEFAULT NULL COMMENT '生活态度',
-  `create_time` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '创建时间',
-  `last_login_time` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '最后登录时间',
+  `create_time` datetime DEFAULT NULL COMMENT '创建时间',
+  `last_login_time` datetime DEFAULT NULL COMMENT '最后登录时间',
   `status` varchar(20) DEFAULT NULL COMMENT '状态',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户信息表';
@@ -50,4 +50,4 @@ CREATE TABLE `user` (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('user1', 'user1', '111', '用户1', '1', '18811111111', '2018-08-04 09:29:02', '', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `user` VALUES ('user1', 'user1', '111', '用户1', '1', '18812345678', '2018-08-04 09:29:02', '', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
