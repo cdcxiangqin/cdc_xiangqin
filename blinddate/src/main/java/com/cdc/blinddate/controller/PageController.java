@@ -10,16 +10,16 @@ public class PageController {
     @RequestMapping("/registerPage")
     public String registerPage(){
         System.out.println("registerPage");
-        return "registerPage";
+        return "/registerPage";
     }
 
     @RequestMapping("/testPage")
     public String testPage(){
         System.out.println("testPage");
-        return "testPage";
+        return "/testPage";
     }
 
     @RequestMapping("/getText")
     @ResponseBody
-    public String getText(){return "resultText";}
+    public String getText(){return "/resultText";}
 }

@@ -24,7 +24,7 @@ $(document).ready(function() {
                 success:function(data){
                     alert(JSON.stringify(data));
                     window.location.href="/templates/html/success.html";
-                    // window.open("/templates/success.html");
+                    // window.open("/ziyuan/success.html");
                 }
             })
         }
