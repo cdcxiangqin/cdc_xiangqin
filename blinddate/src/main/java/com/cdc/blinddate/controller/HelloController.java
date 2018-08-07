@@ -11,8 +11,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
  **/
 @Controller
 public class HelloController {
-    @RequestMapping("/hello")
-    public String index() {
+    @RequestMapping("/signin")
+    public String signIn() {
         return "/sign_in";
+    }
+
+    @RequestMapping("/index")
+    public String index() {
+        return "/index";
     }
 }
