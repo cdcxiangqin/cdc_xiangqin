@@ -1,6 +1,8 @@
 package com.cdc.blinddate.interfaces.user.facede;
 
 import com.cdc.blinddate.interfaces.user.command.AuthenticateCommand;
+import com.cdc.blinddate.interfaces.user.command.RegisterCommand;
+import com.cdc.blinddate.interfaces.user.facede.dto.RegisterDto;
 import com.cdc.blinddate.interfaces.user.facede.dto.TokenDTO;
 
 /**
@@ -12,4 +14,5 @@ import com.cdc.blinddate.interfaces.user.facede.dto.TokenDTO;
 public interface UserServiceFaced {
 
     TokenDTO authenticate(AuthenticateCommand authenticateCommand);
+    RegisterDto signUp(RegisterCommand registerCommand);
 }

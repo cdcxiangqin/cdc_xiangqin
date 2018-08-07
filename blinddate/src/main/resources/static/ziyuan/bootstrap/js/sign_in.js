@@ -1,7 +1,8 @@
 $(document).ready(function() {
     $("#verifyButton").click(function () {
-        var username = $("input[name='username']").val();
-        var password = $("input[name='password']").val();
+        //删除空格
+        var username = $.trim($("input[name='username']").val());
+        var password = $.trim($("input[name='password']").val());
         // alert(username);
         var authenticateCommand = {
             "username":$("input[name='username']").val(),
@@ -11,7 +12,6 @@ $(document).ready(function() {
         if (username=="" || password=="") {
             alert("用户名或密码不能为空");
         } else {
-            alert("gyutyutui");
             $.ajax({
                 url:"/api/authenticate",
                 type:"POST",
@@ -20,10 +20,9 @@ $(document).ready(function() {
                 contentType: 'application/json;charset=utf-8',
                 async:false,
                 data:JSON.stringify(authenticateCommand),
-
                 success:function(data){
                     alert(JSON.stringify(data));
-                    window.location.href="/templates/html/success.html";
+                    window.location.href="/success.html";
                     // window.open("/ziyuan/success.html");
                 }
             })

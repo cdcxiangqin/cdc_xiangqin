@@ -16,7 +16,7 @@ import java.util.Date;
  **/
 @Entity
 @Table(name = "base_user")
-public class baseUser extends IdEntity implements Serializable {
+public class BaseUser extends IdEntity implements Serializable {
     private final static long serialVersionUID = 1L;
 
     /** 用户名 */
@@ -85,6 +85,9 @@ public class baseUser extends IdEntity implements Serializable {
     /** 最后登录时间 */
     @Column
     private Date lastLoginTime;
+    /** 邮箱 */
+    @Column
+    private String email;
     /** 状态 */
     @Column
     private int isStatus;
@@ -273,9 +276,17 @@ public class baseUser extends IdEntity implements Serializable {
         this.isStatus = isStatus;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     @Override
     public String toString() {
-        return "baseUser{" +
+        return "BaseUser{" +
                 "username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", name='" + name + '\'' +
@@ -298,7 +309,9 @@ public class baseUser extends IdEntity implements Serializable {
                 ", lifeAttitude='" + lifeAttitude + '\'' +
                 ", createTime=" + createTime +
                 ", lastLoginTime=" + lastLoginTime +
+                ", email='" + email + '\'' +
                 ", isStatus=" + isStatus +
                 '}';
     }
 }
+

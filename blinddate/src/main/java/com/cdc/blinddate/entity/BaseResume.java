@@ -6,5 +6,5 @@ package com.cdc.blinddate.entity;
  * @Author: Mr.Hogan
  * @Create: 2018-08-06 15:36
  **/
-public class baseResume {
+public class BaseResume {
 }

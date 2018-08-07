@@ -51,17 +51,22 @@ $(function(){
 					$("input[name='email']")[0].style.border="1px solid red"; 
 					return false;
 				}
-			
+
+				var Register = {
+                    "name":$("input[name='username']").val(),
+					"sex":$("input[type='radio']").val(),
+                    "password":$("input[name='password']").val(),
+                    "email":$("input[name='email']").val()
+				}
+
 				$.ajax({
 					cache: false,
 					type: "POST",
 					url:"/user/register",	//把表单数据发送到url
-					data:{
-						name:"username",
-						sex:"sex",
-						password:"password",
-						email:"email"
-					},	//要发送的是ajaxFrm表单中的数据
+                    dataType:"json",
+                    cache:false,
+                    contentType: 'application/json;charset=utf-8',
+					data:JSON.stringify(Register),	//要发送的是ajaxFrm表单中的数据
 					async: false,
 					error: function(request) {
 					alert("发送请求失败！");
@@ -211,8 +216,8 @@ function randomColor() {//得到随机的颜色值
 					<form id="ajaxFrm">
 						<input name="username" type="text" class="kuang_txt phone"
 							placeholder="用户名(必填)" /> <br> <input id="man" type="radio"
-							checked="checked" name="sex" value="男" />男&nbsp;&nbsp;&nbsp; <input
-							id="woman" type="radio" name="sex" value="女" />女 <br> <input
+							checked="checked" name="sex" value="male" />男&nbsp;&nbsp;&nbsp; <input
+							id="woman" type="radio" name="sex" value="female" />女 <br> <input
 							name="password" type="password" class="kuang_txt possword"
 							placeholder="密码(不少于6个字符)"> <input name="chkpass"
 							type="password" class="kuang_txt ckpossword" placeholder="确认密码">

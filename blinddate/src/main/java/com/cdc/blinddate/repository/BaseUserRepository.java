@@ -10,6 +10,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @Author: Mr.Hogan
  * @Create: 2018-08-07 21:08
  **/
-public interface BaserRepository extends JpaRepository<BaseUser, Long> {
-//    BaserRepository findByUsername(BaseUser);
+public interface BaseUserRepository extends JpaRepository<BaseUser, Long> {
+//    BaseUserRepository findByUsername(BaseUser);
 }
