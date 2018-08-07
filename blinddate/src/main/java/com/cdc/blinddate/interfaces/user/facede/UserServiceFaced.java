@@ -1,8 +1,7 @@
-package com.cdc.blinddate.interfaces.facede;
+package com.cdc.blinddate.interfaces.user.facede;
 
+import com.cdc.blinddate.interfaces.user.command.AuthenticateCommand;
 import com.cdc.blinddate.interfaces.user.facede.dto.TokenDTO;
-
-import java.util.Optional;
 
 /**
  * @Program: blinddate
@@ -12,5 +11,5 @@ import java.util.Optional;
  **/
 public interface UserServiceFaced {
 
-    TokenDTO authenticate(com.cdc.blinddate.interfaces.command.AuthenticateCommand authenticateCommand);
+    TokenDTO authenticate(AuthenticateCommand authenticateCommand);
 }

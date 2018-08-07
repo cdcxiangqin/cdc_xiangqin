@@ -1,15 +1,15 @@
 package com.cdc.blinddate.interfaces.user.internal;
 
 import com.cdc.blinddate.entity.UserSingIn;
-import com.cdc.blinddate.interfaces.command.AuthenticateCommand;
+
+import com.cdc.blinddate.interfaces.user.command.AuthenticateCommand;
+import com.cdc.blinddate.interfaces.user.facede.UserServiceFaced;
 import com.cdc.blinddate.interfaces.user.facede.dto.TokenDTO;
 import com.cdc.blinddate.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.Optional;
 
 /**
  * @Program: blinddate
@@ -19,7 +19,7 @@ import java.util.Optional;
  **/
 
 @Service
-public class UserServiceFacedImpl implements com.cdc.blinddate.interfaces.facede.UserServiceFaced {
+public class UserServiceFacedImpl implements UserServiceFaced {
 
     private final UserRepository userRepository;
 

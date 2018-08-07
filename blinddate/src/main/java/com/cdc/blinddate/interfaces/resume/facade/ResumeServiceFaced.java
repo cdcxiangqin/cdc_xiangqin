@@ -1,6 +1,6 @@
 package com.cdc.blinddate.interfaces.resume.facade;
 
-import com.cdc.blinddate.interfaces.resume.ResumeCommand;
+import com.cdc.blinddate.interfaces.resume.command.ResumeCommand;
 import com.cdc.blinddate.interfaces.resume.facade.dto.BaseResumenDto;
 
 /**

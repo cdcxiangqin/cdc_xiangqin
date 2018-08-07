@@ -1,4 +1,4 @@
-package com.cdc.blinddate.interfaces.command;
+package com.cdc.blinddate.interfaces.user.command;
 
 import io.swagger.annotations.ApiModelProperty;
 

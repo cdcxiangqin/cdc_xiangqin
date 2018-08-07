@@ -1,4 +1,4 @@
-package com.cdc.blinddate.interfaces.resume;
+package com.cdc.blinddate.interfaces.resume.command;
 
 /**
  * @Program: blinddate

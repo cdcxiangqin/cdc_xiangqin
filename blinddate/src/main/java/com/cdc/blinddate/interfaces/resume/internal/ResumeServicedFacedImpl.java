@@ -1,7 +1,5 @@
 package com.cdc.blinddate.interfaces.resume.internal;
 
-import com.cdc.blinddate.interfaces.resume.facade.ResumeServiceFaced;
-
 /**
  * @Program: blinddate
  * @Description: 接口实现

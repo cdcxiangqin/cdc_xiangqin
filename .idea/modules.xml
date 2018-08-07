@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/blinddate/blinddate.iml" filepath="$PROJECT_DIR$/blinddate/blinddate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/cdc_xiangqin.iml" filepath="$PROJECT_DIR$/.idea/cdc_xiangqin.iml" />
+    </modules>
+  </component>
+</project>
