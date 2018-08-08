@@ -1,4 +1,4 @@
-package com.cdc.blinddate.interfaces.user;
+package com.cdc.blinddate.controller;
 
 import com.cdc.blinddate.interfaces.ApiPaths;
 import com.cdc.blinddate.interfaces.user.command.AuthenticateCommand;
@@ -21,20 +21,20 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
  * @Author: Mr.Hogan
  * @Create: 2018-08-05 03:12
  **/
-//@RestController
-//@RequestMapping(path = ApiPaths.API_CONTEXT_PATH)
-//public class AuthenticationResource {
-//
-//    private final UserServiceFaced userServiceFaced;
-//
-//    @Autowired
-//    public AuthenticationResource(final UserServiceFaced userServiceFaced) {
-//        this.userServiceFaced = userServiceFaced;
-//    }
-//
-//    @ApiOperation(value = "登录", notes = "", response = TokenDTO.class, httpMethod = "POST")
-//    @RequestMapping(value = "/authenticate", method = POST, produces = APPLICATION_JSON_VALUE)
-//    public TokenDTO authenticate(@Valid @RequestBody AuthenticateCommand authenticateCommand) {
-//        return userServiceFaced.authenticate(authenticateCommand);
-//    }
-//}
+@RestController
+@RequestMapping(path = ApiPaths.API_CONTEXT_PATH)
+public class AuthenticationResource {
+
+    private final UserServiceFaced userServiceFaced;
+
+    @Autowired
+    public AuthenticationResource(final UserServiceFaced userServiceFaced) {
+        this.userServiceFaced = userServiceFaced;
+    }
+
+    @ApiOperation(value = "登录", notes = "", response = TokenDTO.class, httpMethod = "POST")
+    @RequestMapping(value = "/authenticate", method = POST, produces = APPLICATION_JSON_VALUE)
+    public TokenDTO authenticate(@Valid @RequestBody AuthenticateCommand authenticateCommand) {
+        return userServiceFaced.authenticate(authenticateCommand);
+    }
+}
