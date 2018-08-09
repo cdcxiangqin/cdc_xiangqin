@@ -3,6 +3,9 @@ package com.cdc.blinddate.service;
 import com.cdc.blinddate.entity.User;
 import com.baomidou.mybatisplus.service.IService;
 
+import java.util.List;
+import java.util.Map;
+
 /**
  * <p>
  * 用户信息表 服务类
@@ -12,5 +15,7 @@ import com.baomidou.mybatisplus.service.IService;
  * @since 2018-08-03
  */
 public interface UserService extends IService<User> {
-	
+	public User login(Map<String,String> params);
+
+	public List<User> getUserList(User user);
 }

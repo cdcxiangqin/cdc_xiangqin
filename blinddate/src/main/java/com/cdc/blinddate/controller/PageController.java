@@ -19,6 +19,12 @@ public class PageController {
         return "/testPage";
     }
 
+    @RequestMapping("/successPage")
+    public String successPage(){
+        System.out.println("successPage");
+        return "/success";
+    }
+
     @RequestMapping("/getText")
     @ResponseBody
     public String getText(){return "/resultText";}

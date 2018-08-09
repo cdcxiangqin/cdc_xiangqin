@@ -8,6 +8,7 @@ import com.cdc.blinddate.interfaces.user.facede.UserServiceFaced;
 import com.cdc.blinddate.interfaces.user.facede.dto.RegisterDto;
 import com.cdc.blinddate.interfaces.user.facede.dto.TokenDTO;
 import com.cdc.blinddate.service.UserService;
+import com.cdc.blinddate.util.JsonUtil;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,9 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
-import java.util.Date;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
@@ -92,27 +91,24 @@ public class UserController {
      * @author: 纪佳鸿
      * @time: 2018/8/6 15:10
      */
-    @RequestMapping("/login")
+    @RequestMapping(value="/login",produces="application/json;charset=UTF-8")
     public String login(@RequestBody Map<String,String> params,HttpServletRequest request){
         String loginResult=null;
-        String username=params.get("username");
-        String password=params.get("password");
-        Wrapper<User> wapper=new EntityWrapper<User>();
-        wapper.eq("username",username);
-        wapper.eq("password",password);
-        User user=userService.selectOne(wapper);
+        User user=userService.login(params);
         if(null!=user){
             request.getSession().setAttribute("user",user);
-            user.setLastLoginTime(new Date());
-            userService.updateById(user);
-            loginResult="{\"result\":\"success\"}";
+//            loginResult="{\"result\":\"success\",user:"+JsonUtil.toJSONString(user)+"}";
+            Map resultMap=new HashMap();
+            resultMap.put("result","success");
+            resultMap.put("user",user);
+            loginResult=JsonUtil.toJSONString(resultMap);
         }else{
             loginResult="{\"result\":\"fail\"}";
         }
         return loginResult;
     }
 
-    @RequestMapping("/unlogin")
+    @RequestMapping(value="/unlogin",produces="application/json;charset=UTF-8")
     public String unlogin(@RequestBody Map<String,String> params,HttpServletRequest request){
         String loginResult=null;
         User user=(User)request.getSession().getAttribute("user");
@@ -123,6 +119,18 @@ public class UserController {
             loginResult="{\"result\":\"fail\"}";
         }
         return loginResult;
+    }
+
+    @RequestMapping(value="/getUserList",produces="application/json;charset=UTF-8")
+    public String getUserList(@RequestBody Map<String,String> params,HttpServletRequest request){
+        String getUserListResult=null;
+        User user=(User)request.getSession().getAttribute("user");
+        List<User> list=userService.getUserList(user);
+        Map resultMap=new HashMap();
+        resultMap.put("result","success");
+        resultMap.put("list",list);
+        getUserListResult=JsonUtil.toJSONString(resultMap);
+        return getUserListResult;
     }
 
 }

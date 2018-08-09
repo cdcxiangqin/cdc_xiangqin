@@ -1,9 +1,10 @@
 package com.cdc.blinddate.entity;
 
 import java.util.Date;
+
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
-import com.cdc.blinddate.util.TimeUtil;
+import com.cdc.blinddate.util.JsonUtil;
 
 import java.io.Serializable;
 
@@ -13,7 +14,7 @@ import java.io.Serializable;
  * </p>
  *
  * @author 纪佳鸿
- * @since 2018-08-03
+ * @since 2018-08-08
  */
 public class User extends Model<User> {
 
@@ -109,6 +110,11 @@ public class User extends Model<User> {
      */
 	@TableField("life_attitude")
 	private String lifeAttitude;
+    /**
+     * 头像地址
+     */
+	@TableField("head_address")
+	private String headAddress;
     /**
      * 创建时间
      */
@@ -293,6 +299,14 @@ public class User extends Model<User> {
 		this.lifeAttitude = lifeAttitude;
 	}
 
+	public String getHeadAddress() {
+		return headAddress;
+	}
+
+	public void setHeadAddress(String headAddress) {
+		this.headAddress = headAddress;
+	}
+
 	public Date getCreateTime() {
 		return createTime;
 	}
@@ -331,7 +345,7 @@ public class User extends Model<User> {
 				", name='" + name + '\'' +
 				", sex='" + sex + '\'' +
 				", mobile='" + mobile + '\'' +
-				", birthday=" + TimeUtil.getTimeString(birthday) +
+				", birthday=" + birthday +
 				", folk='" + folk + '\'' +
 				", height=" + height +
 				", weight=" + weight +
@@ -346,8 +360,9 @@ public class User extends Model<User> {
 				", currentCity='" + currentCity + '\'' +
 				", hobby='" + hobby + '\'' +
 				", lifeAttitude='" + lifeAttitude + '\'' +
-				", createTime=" + TimeUtil.getTimeString(createTime) +
-				", lastLoginTime=" + TimeUtil.getTimeString(lastLoginTime) +
+				", headAddress='" + headAddress + '\'' +
+				", createTime=" + createTime +
+				", lastLoginTime=" + lastLoginTime +
 				", status='" + status + '\'' +
 				'}';
 	}
