@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 /**
  * <p>
@@ -22,6 +23,32 @@ import java.util.Map;
  */
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
+
+    @Override
+    public User register(Map<String, String> params) {
+        String username=params.get("username");
+        String password=params.get("password");
+        String name=params.get("name");
+        String sex=params.get("sex");
+        String uuid = UUID.randomUUID().toString().replace("-", "");
+        User user=new User();
+        user.setId(uuid);
+        user.setUsername(username);
+        user.setPassword(password);
+        user.setName(name);
+        user.setSex(sex);
+        user.setCreateTime(new Date());
+        user.setStatus("1");
+        boolean isSuccess=this.insert(user);
+        if(isSuccess==true){
+            Wrapper<User> wrapper=new EntityWrapper<User>();
+            wrapper.eq("username",username);
+            user=this.selectOne(wrapper);
+            return user;
+        }else{
+            return null;
+        }
+    }
 
     @Override
     public User login(Map<String, String> params) {
