@@ -53,7 +53,8 @@ $(function(){
 				}
 
 				var Register = {
-                    "name":$("input[name='username']").val(),
+                    "username":$("input[name='username']").val(),
+                    "name":$("input[name='name']").val(),
 					"sex":$("input[type='radio']").val(),
                     "password":$("input[name='password']").val(),
                     "email":$("input[name='email']").val()
@@ -68,13 +69,13 @@ $(function(){
                     contentType: 'application/json;charset=utf-8',
 					data:JSON.stringify(Register),	//要发送的是ajaxFrm表单中的数据
 					async: false,
-					error: function(request) {
-					alert("发送请求失败！");
-					},
+					// error: function(request) {
+					// alert("发送请求失败！");
+					// },
 					success: function(data) {
 					// alert('提交成功！');
 					// alert(data.username);
-                        window.location.href="/index";
+                        top.location.href="/index";
 					}
 				});
 			$(".input-val").val('');
@@ -157,6 +158,14 @@ function randomColor() {//得到随机的颜色值
 				$("input[name='username']")[0].style.border="1px solid #dddddd";
 			}
 		});
+        //判断用户名是否为空
+        $("input[name='name']").blur(function(){
+            if($("input[name='name']").val()==''){
+                $("input[name='name']")[0].style.border="1px solid red";
+            }else {
+                $("input[name='name']")[0].style.border="1px solid #dddddd";
+            }
+        });
 		//判断密码是否为空
 		$("input[name='password']").blur(function(){
 
@@ -216,9 +225,14 @@ function randomColor() {//得到随机的颜色值
 					<h3>欢迎注册</h3>
 					<form id="ajaxFrm">
 						<input name="username" type="text" class="kuang_txt phone"
-							placeholder="用户名(必填)" /> <br> <input id="man" type="radio"
-							checked="checked" name="sex" value="male" />男&nbsp;&nbsp;&nbsp; <input
-							id="woman" type="radio" name="sex" value="female" />女 <br> <input
+							placeholder="用户名(必填)" /> <br>
+						<input name="name" type="text" class="kuang_txt phone"
+							   placeholder="姓名(必填)" /> <br>
+						<input id="man" type="radio"
+							checked="checked" name="sex" value="male" />男&nbsp;&nbsp;&nbsp;
+						<input
+							id="woman" type="radio" name="sex" value="female" />女 <br>
+						<input
 							name="password" type="password" class="kuang_txt possword"
 							placeholder="密码(不少于6个字符)"> <input name="chkpass"
 							type="password" class="kuang_txt ckpossword" placeholder="确认密码">
@@ -237,7 +251,7 @@ function randomColor() {//得到随机的颜色值
 					</form>
 					<div>
 						<p align="center">
-							已有账号？<a href="login.html" style="color: #37b5f9;">立即登录</a>
+							已有账号？<a href="/signin" style="color: #37b5f9;">立即登录</a>
 						</p>
 					</div>
 				</div>
