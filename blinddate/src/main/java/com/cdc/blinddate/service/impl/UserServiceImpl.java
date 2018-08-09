@@ -52,4 +52,19 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         list.forEach(u -> u.setPassword(null));
         return list;
     }
+
+    @Override
+    public User getUser(Map<String, String> params) {
+        User user=null;
+        Wrapper<User> wrapper=new EntityWrapper<User>();
+        String username=params.get("username");
+        if(null!=username){
+            wrapper.eq("username",username);
+            user=this.selectOne(wrapper);
+            if(null!=user){
+                user.setPassword(null);
+            }
+        }
+        return null;
+    }
 }
