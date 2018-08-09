@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <title>中数通相亲平台</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-<link type="text/css" rel="stylesheet" href="/ziyuan/css/register.css">
-<script type="text/javascript" src="/ziyuan/js/jquery.min.js"></script>
+<link type="text/css" rel="stylesheet" href="css/register.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
 <style type="text/css">
 .input-val {
 	width: 236px;
@@ -15,7 +15,7 @@
 	padding-left: 32px;
 	color: #b1a9a9;
 	margin-bottom: 10px;
-	background: url(./static/images/zc_19.jpg) no-repeat 10px 10px;
+	background: url(images/zc_19.jpg) no-repeat 10px 10px;
 }
 </style>
 </head>
@@ -72,8 +72,9 @@ $(function(){
 					alert("发送请求失败！");
 					},
 					success: function(data) {
-					alert('提交成功！');
-					alert(data.username);
+					// alert('提交成功！');
+					// alert(data.username);
+                        window.location.href="/index";
 					}
 				});
 			$(".input-val").val('');

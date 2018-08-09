@@ -1,0 +1,53 @@
+/*顶部信息 开始*/
+.user-top{
+    z-index: 20;
+}
+.user-page .slidename{
+    font-family: "Clicker Script", cursive;
+    font-size: 42px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    color: #ebe6d3;
+}
+.top-info-list{
+    margin-top: 30px;
+}
+.top-info-item{
+    float: left;
+    width: 30%;
+    height: 48px;
+    line-height: 48px;
+    font-size: 22px;
+}
+.top-info-item .item-value{
+    padding:6px 12px;
+    border-radius: 2px;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.82);
+}
+#contact .mark-user-wrap{
+    clear: both;
+    padding-top: 30px;
+    padding-left: 20px;
+}
+#contact button{
+    width: 60px;
+    height: 28px;
+    background: none;
+    border: none;
+    background-color: #998cb8;
+    color: #fff;
+    border-radius: 3px;
+}
+#contact .mark-user:hover{
+    background-color: #7e729b;
+}
+#contact .marked-user{
+    background-color: rgba(223, 156, 136, 1);
+}
+/*顶部信息 结束*/
+/*详细资料 开始*/
+#contact.service-blocks{
+    text-align: left;
+}
+/*详细资料 结束*/

@@ -1,0 +1,88 @@
+/*初始化样式 开始*/
+a:hover{
+    text-decoration: none;
+    cursor: pointer;
+}
+/*初始化样式 结束*/
+/*导航栏 开始*/
+.nav .nav-menu{
+    margin-left: 200px;
+}
+.nav .nav-menu,
+.nav .navbar-form,
+.nav .sign-wrap{
+    float: left;
+}
+#signin{
+    background-color: #ffa0a8;
+    color: #fff;
+}
+.nav .sign-wrap{
+    margin-left: 60px;
+
+}
+.nav .sign-wrap .navbar-btn{
+    display: inline-block;
+}
+.nav .navbar-form{
+    margin-left: 80px;
+}
+.navbar-form button{
+    margin-top: 5px;
+    width: 60px;
+    height: 28px;
+    background: none;
+    border: none;
+    background-color: #998cb8;
+    color: #fff;
+    border-radius: 3px;
+}
+.navbar-form button:hover{
+    background-color: #7e729b;
+}
+.navbar-inverse form{
+    position: relative;
+}
+.navbar {
+    background-color: #ffc0cb;
+    border: none;
+}
+/*导航栏 结束*/
+/*顶部logo 开始*/
+.logotype h3:first-child{
+    margin-top: 40px;
+}
+.logotype h3{
+    font-family: "Clicker Script", cursive;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
+    color: #fff;
+    letter-spacing:2px;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+}
+.logotype h2{
+    padding: 0 20px;
+    letter-spacing: 2px;
+}
+/*顶部logo 结束*/
+
+/*用户展示 开始*/
+#portfolio-filtering .caption{
+    display: block;
+}
+#portfolio-filtering h3{
+    font-size: 20px;
+}
+#portfolio-filtering h4{
+    font-size: 17px;
+}
+#portfolio-filtering .user-value{
+    color: #ad9fd1;
+}
+/*用户展示 结束*/
+/*footer底部信息 开始*/
+.footer h4{
+    font-size: 30px;
+}
+/*footer底部信息 结束*/

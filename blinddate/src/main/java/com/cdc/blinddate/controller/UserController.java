@@ -95,6 +95,7 @@ public class UserController {
     public String login(@RequestBody Map<String,String> params,HttpServletRequest request){
         String loginResult=null;
         User user=userService.login(params);
+        System.out.println(user);
         if(null!=user){
             request.getSession().setAttribute("user",user);
 //            loginResult="{\"result\":\"success\",user:"+JsonUtil.toJSONString(user)+"}";
@@ -107,9 +108,10 @@ public class UserController {
         }
         return loginResult;
     }
-
+//退出
     @RequestMapping(value="/unlogin",produces="application/json;charset=UTF-8")
     public String unlogin(@RequestBody Map<String,String> params,HttpServletRequest request){
+
         String loginResult=null;
         User user=(User)request.getSession().getAttribute("user");
         if(null!=user){
@@ -120,7 +122,7 @@ public class UserController {
         }
         return loginResult;
     }
-
+//首页用户列表信息
     @RequestMapping(value="/getUserList",produces="application/json;charset=UTF-8")
     public String getUserList(@RequestBody Map<String,String> params,HttpServletRequest request){
         String getUserListResult=null;
