@@ -57,13 +57,14 @@ public class UserController {
      * @time: 2018/8/6 15:09
      */
     @RequestMapping(value="/register",produces="application/json;charset=UTF-8")//HttpServletRequest request,HttpServletResponse response
-    public String register(@RequestBody Map<String,String> params){
+    public String register(@RequestBody Map<String,String> params,HttpServletRequest request){
         String registerResult=null;
         User user=userService.register(params);
         Map resultMap=new HashMap();
         if(null!=user){
             resultMap.put("result","success");
             resultMap.put("user",user);
+            request.getSession().setAttribute("user",user);
         }else{
             resultMap.put("result","fail");
         }
@@ -168,8 +169,12 @@ public class UserController {
         User user=null;
         user=(User)request.getSession().getAttribute("user");
         Map resultMap=new HashMap();
-        resultMap.put("result","success");
-        resultMap.put("user",user);
+        if(null!=user){
+            resultMap.put("result","success");
+            resultMap.put("user",user);
+        }else{
+            resultMap.put("result","fail");
+        }
         getUserResult=JsonUtil.toJSONString(resultMap);
         return getUserResult;
     }
