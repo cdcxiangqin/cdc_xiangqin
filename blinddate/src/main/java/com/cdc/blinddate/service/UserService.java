@@ -15,6 +15,8 @@ import java.util.Map;
  * @since 2018-08-03
  */
 public interface UserService extends IService<User> {
+	public User register(Map<String,String> params);
+
 	public User login(Map<String,String> params);
 
 	public List<User> getUserList(User user);

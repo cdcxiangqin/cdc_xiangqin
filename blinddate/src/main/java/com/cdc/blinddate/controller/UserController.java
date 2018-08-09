@@ -56,25 +56,18 @@ public class UserController {
      * @author: 纪佳鸿
      * @time: 2018/8/6 15:09
      */
-    @RequestMapping("/register")//HttpServletRequest request,HttpServletResponse response
+    @RequestMapping(value="/register",produces="application/json;charset=UTF-8")//HttpServletRequest request,HttpServletResponse response
     public String register(@RequestBody Map<String,String> params){
         String registerResult=null;
-        registerResult="register";
-        String username=params.get("username");
-        String password=params.get("password");
-        String name=params.get("name");
-        String sex=params.get("sex");
-        String uuid = UUID.randomUUID().toString().replace("-", "");
-        User user=new User();
-        user.setId(uuid);
-        user.setUsername(username);
-        user.setPassword(password);
-        user.setName(name);
-        user.setSex(sex);
-        user.setCreateTime(new Date());
-        user.setStatus("1");
-        userService.insert(user);
-        registerResult=user.toString();
+        User user=userService.register(params);
+        Map resultMap=new HashMap();
+        if(null!=user){
+            resultMap.put("result","success");
+            resultMap.put("user",user);
+        }else{
+            resultMap.put("result","fail");
+        }
+        registerResult=JsonUtil.toJSONString(resultMap);
         return registerResult;
     }
 
