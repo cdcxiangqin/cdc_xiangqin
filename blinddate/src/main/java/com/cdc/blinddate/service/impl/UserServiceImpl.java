@@ -26,12 +26,18 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
     @Override
     public User register(Map<String, String> params) {
+        User user=new User();
         String username=params.get("username");
+        Wrapper<User> wrapper=new EntityWrapper<User>();
+        wrapper.eq("username",username);
+        user=this.selectOne(wrapper);
+        if(null!=user){
+            return null;
+        }
         String password=params.get("password");
         String name=params.get("name");
         String sex=params.get("sex");
-        String uuid = UUID.randomUUID().toString().replace("-", "");
-        User user=new User();
+        String uuid=UUID.randomUUID().toString().replace("-","");
         user.setId(uuid);
         user.setUsername(username);
         user.setPassword(password);
@@ -41,8 +47,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         user.setStatus("1");
         boolean isSuccess=this.insert(user);
         if(isSuccess==true){
-            Wrapper<User> wrapper=new EntityWrapper<User>();
-            wrapper.eq("username",username);
             user=this.selectOne(wrapper);
             return user;
         }else{
