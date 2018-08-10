@@ -46,7 +46,7 @@ public class PageController {
     }
 
     @RequestMapping(value="/otheruserpage",produces="application/json;charset=UTF-8")
-    public String otheruserpage(@RequestBody Map<String,String> params, HttpServletRequest request) {
+    public String otheruserpage(@RequestBody Map<String,String> params,HttpServletRequest request) {
         String username=request.getParameter("username");
         request.getSession().setAttribute("otherUsername",username);
         return "/otheruser-page";
