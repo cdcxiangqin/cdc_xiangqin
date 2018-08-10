@@ -101,6 +101,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
                 this.updateById(user);
             }
         }
-        return null;
+        return user;
     }
 }
