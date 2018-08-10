@@ -31,8 +31,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         Wrapper<User> wrapper=new EntityWrapper<User>();
         wrapper.eq("username",username);
         user=this.selectOne(wrapper);
-        if(null!=user)
+        if(null!=user){
             return null;
+        }
         user=new User();
         String password=params.get("password");
         String name=params.get("name");
