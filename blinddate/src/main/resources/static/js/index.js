@@ -60,19 +60,21 @@ $(document).ready(function () {
         }
     })
 
-    // //用户个人资料显示
-    // $("#loginname").click(function () {
-    //     $.ajax({
-    //         url:"/user/getSelf",
-    //         type:"POST",
-    //         dataType:"json",
-    //         cache:false,
-    //         contentType: 'application/json;charset=utf-8',
-    //         async:false,
-    //         data:{"":""},
-    //         success:function (data) {
-    //             alert(data);
-    //         }
-    //     })
-    // })
+    // 根据是否登陆显示推荐对象
+    $.ajax({
+        url:"/user/getSelf",
+        type:"POST",
+        dataType:"json",
+        cache:false,
+        contentType: 'application/json;charset=utf-8',
+        async:false,
+        data:JSON.stringify({"":""}),
+        success:function(data){
+            var result = data.result;
+            if ("fail" == result){
+               $("#slide4").hide();
+            }
+
+        }
+    })
 });
