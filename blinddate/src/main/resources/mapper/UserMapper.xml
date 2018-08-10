@@ -1,4 +1,4 @@
-<?mapper version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cdc.blinddate.mapper.UserMapper">
 
@@ -25,9 +25,36 @@
 		<result column="current_city" property="currentCity" />
 		<result column="hobby" property="hobby" />
 		<result column="life_attitude" property="lifeAttitude" />
+		<result column="head_address" property="headAddress" />
 		<result column="create_time" property="createTime" />
 		<result column="last_login_time" property="lastLoginTime" />
 		<result column="status" property="status" />
+		<result column="activity" property="activity" />
+		<result column="popularity" property="popularity" />
+		<result column="hobby_sport" property="hobbySport" />
+		<result column="hobby_music" property="hobbyMusic" />
+		<result column="hobby_video" property="hobbyVideo" />
+		<result column="hobby_food" property="hobbyFood" />
+		<result column="hobby_place" property="hobbyPlace" />
+		<result column="hobby_idol" property="hobbyIdol" />
+		<result column="hobby_pet" property="hobbyPet" />
+		<result column="life_smoke" property="lifeSmoke" />
+		<result column="life_cook" property="lifeCook" />
+		<result column="life_drink" property="lifeDrink" />
+		<result column="life_housework" property="lifeHousework" />
+		<result column="life_deposit" property="lifeDeposit" />
+		<result column="life_car" property="lifeCar" />
+		<result column="life_busy" property="lifeBusy" />
+		<result column="marriage_zodiac_taboo" property="marriageZodiacTaboo" />
+		<result column="marriage_constellation_taboo" property="marriageConstellationTaboo" />
+		<result column="marriage_marry_time" property="marriageMarryTime" />
+		<result column="marriage_want_child" property="marriageWantChild" />
+		<result column="marriage_dating_site" property="marriageDatingSite" />
+		<result column="marriage_emotional_experience" property="marriageEmotionalExperience" />
+		<result column="marriage_family_status" property="marriageFamilyStatus" />
+		<result column="marriage_parents_condition" property="marriageParentsCondition" />
+		<result column="marriage_parental_economic_status" property="marriageParentalEconomicStatus" />
+		<result column="marriage_siblings" property="marriageSiblings" />
 	</resultMap>
 
 </mapper>

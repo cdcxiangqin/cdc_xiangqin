@@ -1,11 +1,8 @@
 package com.cdc.blinddate.entity;
 
 import java.util.Date;
-
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
-import com.cdc.blinddate.util.JsonUtil;
-
 import java.io.Serializable;
 
 /**
@@ -14,7 +11,7 @@ import java.io.Serializable;
  * </p>
  *
  * @author 纪佳鸿
- * @since 2018-08-08
+ * @since 2018-08-10
  */
 public class User extends Model<User> {
 
@@ -129,6 +126,134 @@ public class User extends Model<User> {
      * 状态
      */
 	private String status;
+    /**
+     * 活跃度
+     */
+	private Long activity;
+    /**
+     * 热门度
+     */
+	private Long popularity;
+    /**
+     * 喜欢的运动
+     */
+	@TableField("hobby_sport")
+	private String hobbySport;
+    /**
+     * 喜欢的音乐
+     */
+	@TableField("hobby_music")
+	private String hobbyMusic;
+    /**
+     * 喜欢的影视作品
+     */
+	@TableField("hobby_video")
+	private String hobbyVideo;
+    /**
+     * 喜欢的食物
+     */
+	@TableField("hobby_food")
+	private String hobbyFood;
+    /**
+     * 喜欢的地方
+     */
+	@TableField("hobby_place")
+	private String hobbyPlace;
+    /**
+     * 喜欢的偶像
+     */
+	@TableField("hobby_idol")
+	private String hobbyIdol;
+    /**
+     * 喜欢的宠物
+     */
+	@TableField("hobby_pet")
+	private String hobbyPet;
+    /**
+     * 是否吸烟
+     */
+	@TableField("life_smoke")
+	private String lifeSmoke;
+    /**
+     * 厨艺
+     */
+	@TableField("life_cook")
+	private String lifeCook;
+    /**
+     * 是否喝酒
+     */
+	@TableField("life_drink")
+	private String lifeDrink;
+    /**
+     * 家务
+     */
+	@TableField("life_housework")
+	private String lifeHousework;
+    /**
+     * 存款
+     */
+	@TableField("life_deposit")
+	private String lifeDeposit;
+    /**
+     * 购车
+     */
+	@TableField("life_car")
+	private String lifeCar;
+    /**
+     * 是否繁忙
+     */
+	@TableField("life_busy")
+	private String lifeBusy;
+    /**
+     * 生肖忌讳
+     */
+	@TableField("marriage_zodiac_taboo")
+	private String marriageZodiacTaboo;
+    /**
+     * 星座忌讳
+     */
+	@TableField("marriage_constellation_taboo")
+	private String marriageConstellationTaboo;
+    /**
+     * 何时结婚
+     */
+	@TableField("marriage_marry_time")
+	private String marriageMarryTime;
+    /**
+     * 想要小孩
+     */
+	@TableField("marriage_want_child")
+	private String marriageWantChild;
+    /**
+     * 约会地点
+     */
+	@TableField("marriage_dating_site")
+	private String marriageDatingSite;
+    /**
+     * 情感经历
+     */
+	@TableField("marriage_emotional_experience")
+	private String marriageEmotionalExperience;
+    /**
+     * j家庭情况
+     */
+	@TableField("marriage_family_status")
+	private String marriageFamilyStatus;
+    /**
+     * 父母情况
+     */
+	@TableField("marriage_parents_condition")
+	private String marriageParentsCondition;
+    /**
+     * 父母经济情况
+     */
+	@TableField("marriage_parental_economic_status")
+	private String marriageParentalEconomicStatus;
+    /**
+     * 兄弟姐妹
+     */
+	@TableField("marriage_siblings")
+	private String marriageSiblings;
 
 
 	public String getId() {
@@ -331,39 +456,217 @@ public class User extends Model<User> {
 		this.status = status;
 	}
 
+	public Long getActivity() {
+		return activity;
+	}
+
+	public void setActivity(Long activity) {
+		this.activity = activity;
+	}
+
+	public Long getPopularity() {
+		return popularity;
+	}
+
+	public void setPopularity(Long popularity) {
+		this.popularity = popularity;
+	}
+
+	public String getHobbySport() {
+		return hobbySport;
+	}
+
+	public void setHobbySport(String hobbySport) {
+		this.hobbySport = hobbySport;
+	}
+
+	public String getHobbyMusic() {
+		return hobbyMusic;
+	}
+
+	public void setHobbyMusic(String hobbyMusic) {
+		this.hobbyMusic = hobbyMusic;
+	}
+
+	public String getHobbyVideo() {
+		return hobbyVideo;
+	}
+
+	public void setHobbyVideo(String hobbyVideo) {
+		this.hobbyVideo = hobbyVideo;
+	}
+
+	public String getHobbyFood() {
+		return hobbyFood;
+	}
+
+	public void setHobbyFood(String hobbyFood) {
+		this.hobbyFood = hobbyFood;
+	}
+
+	public String getHobbyPlace() {
+		return hobbyPlace;
+	}
+
+	public void setHobbyPlace(String hobbyPlace) {
+		this.hobbyPlace = hobbyPlace;
+	}
+
+	public String getHobbyIdol() {
+		return hobbyIdol;
+	}
+
+	public void setHobbyIdol(String hobbyIdol) {
+		this.hobbyIdol = hobbyIdol;
+	}
+
+	public String getHobbyPet() {
+		return hobbyPet;
+	}
+
+	public void setHobbyPet(String hobbyPet) {
+		this.hobbyPet = hobbyPet;
+	}
+
+	public String getLifeSmoke() {
+		return lifeSmoke;
+	}
+
+	public void setLifeSmoke(String lifeSmoke) {
+		this.lifeSmoke = lifeSmoke;
+	}
+
+	public String getLifeCook() {
+		return lifeCook;
+	}
+
+	public void setLifeCook(String lifeCook) {
+		this.lifeCook = lifeCook;
+	}
+
+	public String getLifeDrink() {
+		return lifeDrink;
+	}
+
+	public void setLifeDrink(String lifeDrink) {
+		this.lifeDrink = lifeDrink;
+	}
+
+	public String getLifeHousework() {
+		return lifeHousework;
+	}
+
+	public void setLifeHousework(String lifeHousework) {
+		this.lifeHousework = lifeHousework;
+	}
+
+	public String getLifeDeposit() {
+		return lifeDeposit;
+	}
+
+	public void setLifeDeposit(String lifeDeposit) {
+		this.lifeDeposit = lifeDeposit;
+	}
+
+	public String getLifeCar() {
+		return lifeCar;
+	}
+
+	public void setLifeCar(String lifeCar) {
+		this.lifeCar = lifeCar;
+	}
+
+	public String getLifeBusy() {
+		return lifeBusy;
+	}
+
+	public void setLifeBusy(String lifeBusy) {
+		this.lifeBusy = lifeBusy;
+	}
+
+	public String getMarriageZodiacTaboo() {
+		return marriageZodiacTaboo;
+	}
+
+	public void setMarriageZodiacTaboo(String marriageZodiacTaboo) {
+		this.marriageZodiacTaboo = marriageZodiacTaboo;
+	}
+
+	public String getMarriageConstellationTaboo() {
+		return marriageConstellationTaboo;
+	}
+
+	public void setMarriageConstellationTaboo(String marriageConstellationTaboo) {
+		this.marriageConstellationTaboo = marriageConstellationTaboo;
+	}
+
+	public String getMarriageMarryTime() {
+		return marriageMarryTime;
+	}
+
+	public void setMarriageMarryTime(String marriageMarryTime) {
+		this.marriageMarryTime = marriageMarryTime;
+	}
+
+	public String getMarriageWantChild() {
+		return marriageWantChild;
+	}
+
+	public void setMarriageWantChild(String marriageWantChild) {
+		this.marriageWantChild = marriageWantChild;
+	}
+
+	public String getMarriageDatingSite() {
+		return marriageDatingSite;
+	}
+
+	public void setMarriageDatingSite(String marriageDatingSite) {
+		this.marriageDatingSite = marriageDatingSite;
+	}
+
+	public String getMarriageEmotionalExperience() {
+		return marriageEmotionalExperience;
+	}
+
+	public void setMarriageEmotionalExperience(String marriageEmotionalExperience) {
+		this.marriageEmotionalExperience = marriageEmotionalExperience;
+	}
+
+	public String getMarriageFamilyStatus() {
+		return marriageFamilyStatus;
+	}
+
+	public void setMarriageFamilyStatus(String marriageFamilyStatus) {
+		this.marriageFamilyStatus = marriageFamilyStatus;
+	}
+
+	public String getMarriageParentsCondition() {
+		return marriageParentsCondition;
+	}
+
+	public void setMarriageParentsCondition(String marriageParentsCondition) {
+		this.marriageParentsCondition = marriageParentsCondition;
+	}
+
+	public String getMarriageParentalEconomicStatus() {
+		return marriageParentalEconomicStatus;
+	}
+
+	public void setMarriageParentalEconomicStatus(String marriageParentalEconomicStatus) {
+		this.marriageParentalEconomicStatus = marriageParentalEconomicStatus;
+	}
+
+	public String getMarriageSiblings() {
+		return marriageSiblings;
+	}
+
+	public void setMarriageSiblings(String marriageSiblings) {
+		this.marriageSiblings = marriageSiblings;
+	}
+
 	@Override
 	protected Serializable pkVal() {
 		return this.id;
 	}
 
-	@Override
-	public String toString() {
-		return "User{" +
-				"id='" + id + '\'' +
-				", username='" + username + '\'' +
-				", password='" + password + '\'' +
-				", name='" + name + '\'' +
-				", sex='" + sex + '\'' +
-				", mobile='" + mobile + '\'' +
-				", birthday=" + birthday +
-				", folk='" + folk + '\'' +
-				", height=" + height +
-				", weight=" + weight +
-				", education='" + education + '\'' +
-				", university='" + university + '\'' +
-				", housingConditions='" + housingConditions + '\'' +
-				", child=" + child +
-				", department='" + department + '\'' +
-				", originalProvince='" + originalProvince + '\'' +
-				", originalCity='" + originalCity + '\'' +
-				", currentProvince='" + currentProvince + '\'' +
-				", currentCity='" + currentCity + '\'' +
-				", hobby='" + hobby + '\'' +
-				", lifeAttitude='" + lifeAttitude + '\'' +
-				", headAddress='" + headAddress + '\'' +
-				", createTime=" + createTime +
-				", lastLoginTime=" + lastLoginTime +
-				", status='" + status + '\'' +
-				'}';
-	}
 }

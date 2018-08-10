@@ -45,6 +45,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         user.setSex(sex);
         user.setCreateTime(new Date());
         user.setStatus("1");
+        user.setActivity(0L);
+        user.setPopularity(0L);
         boolean isSuccess=this.insert(user);
         if(isSuccess==true){
             user=this.selectOne(wrapper);
@@ -65,6 +67,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         user=this.selectOne(wrapper);
         if(null!=user){
             user.setLastLoginTime(new Date());
+            user.setActivity(user.getActivity()+1);
             this.updateById(user);
             user.setPassword(null);
         }
@@ -94,6 +97,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             user=this.selectOne(wrapper);
             if(null!=user){
                 user.setPassword(null);
+                user.setPopularity(user.getPopularity()+1);
+                this.updateById(user);
             }
         }
         return null;
