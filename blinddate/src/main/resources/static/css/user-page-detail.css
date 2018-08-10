@@ -5,7 +5,6 @@ li{list-style:none;}
 
 /* content */
 #content{width:70%;margin:0 auto;padding:20px;text-align:left;}
-#content h1{color:#0088bb;}
 #content .item{padding:20px;margin-bottom:20px;border:1px dotted #0088bb;height:300px;}
 #content .item h2{font-size:16px;font-weight:bold;border-bottom:2px solid #0088bb;margin-bottom:10px;}
 #content .item li{display:inline;margin-right:10px;}
@@ -24,4 +23,4 @@ li{list-style:none;}
     text-decoration:none;
     text-align:center;
 }
-#menu ul li a:hover,#menu ul li a.current{color:#fff;background:#0088bb;}　
+#menu ul li a:hover,#menu ul li a.current{color:#fff; background: #6776bf url(../images/noisy.png);}  　

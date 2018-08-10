@@ -1,3 +1,6 @@
+.after:after{
+    content:""; height:0; visibility:hidden; display:block; clear:both;
+}
 /*顶部信息 开始*/
 .user-top{
     z-index: 20;
@@ -46,8 +49,99 @@
     background-color: rgba(223, 156, 136, 1);
 }
 /*顶部信息 结束*/
+
 /*详细资料 开始*/
+#content .item{
+    height: auto;
+}
 #contact.service-blocks{
     text-align: left;
 }
+#content .inform-item{
+    width: 30%;
+    height: 32px;
+    line-height: 32px;
+    float: left;
+    font-weight: bold;
+}
+#content .key{
+    color: rgba(33, 20, 28, 0.5);
+}
+#content .value{
+    margin-left: 10px;
+    padding: 3px 8px;
+    font-family: 黑体;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 3px;
+    color: #6b4a62;
+}
+/*资料 开始*/
+#content .focus-user{
+
+    padding-left: 25px;
+}
+#content .focus-list{
+    margin: 0;
+    margin-left: 30px;
+}
+#content .focus-list .focus-item{
+    float: left;
+    width: 21%;
+    padding: 20px 0;
+    margin-right:15px;
+    background:rgba(68,31,46,0.75) url(../images/noisy.png);
+    border-radius: 5px;
+}
+#content .focus-list .focus-item:hover{
+    background:rgba(68,31,46,0.65) url(../images/noisy.png);
+}
+#content .focus-item a{
+    display: block;
+    text-align: center;
+}
+#content .focus-list .focus-item img{
+    display: block;
+    margin: 0 auto;
+    width: 90px;
+    height: 90px;
+}
+#content .focus-list p{
+    margin:10px;
+    font-size: 10px;
+}
+/*资料 结束*/
+
+/*婚恋观 开始*/
+#item4 .inform-item{
+    width: 45%;
+}
+/*婚恋观 结束*/
+/*相册 开始*/
+#content #item5 .user-photo img{
+    width: 110px;
+    height: 110px;
+}
+#content #item5 .focus-item{
+    background: #516875 url(../images/noisy.png);
+}
+/*相册 结束*/
 /*详细资料 结束*/
+
+/*导航栏*/
+.user-page .nav{
+    text-align: center;
+}
+.user-page .nav #back{
+    display: block;
+    margin: 0 auto;
+    width: 122px;
+    height: 33px;
+    line-height: 33px;
+    color: #fff;
+    border-radius: 5px;
+    background: #516875 url(../images/noisy.png);
+}
+.user-page .nav #back:hover{
+    background: rgba(81, 104, 117, 0.87) url(../images/noisy.png);
+}
