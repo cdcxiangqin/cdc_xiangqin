@@ -11,7 +11,7 @@ import java.io.Serializable;
  * </p>
  *
  * @author 纪佳鸿
- * @since 2018-08-10 15:51:40
+ * @since 2018-08-10
  */
 public class User extends Model<User> {
 
@@ -42,9 +42,25 @@ public class User extends Model<User> {
      */
 	private String mobile;
     /**
+     * QQ号
+     */
+	@TableField("QQ")
+	private String qq;
+    /**
+     * 微信号
+     */
+	private String WeChat;
+    /**
+     * 邮箱
+     */
+	private String email;
+    /**
      * 出生日期
      */
 	private Date birthday;
+    /**
+     * 年龄
+     */
 	private Integer age;
     /**
      * 生肖
@@ -87,6 +103,11 @@ public class User extends Model<User> {
      * 部门
      */
 	private String department;
+    /**
+     * 员工编号
+     */
+	@TableField("employee_number")
+	private String employeeNumber;
     /**
      * 籍贯省
      */
@@ -313,6 +334,30 @@ public class User extends Model<User> {
 		this.mobile = mobile;
 	}
 
+	public String getQq() {
+		return qq;
+	}
+
+	public void setQq(String qq) {
+		this.qq = qq;
+	}
+
+	public String getWeChat() {
+		return WeChat;
+	}
+
+	public void setWeChat(String WeChat) {
+		this.WeChat = WeChat;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 	public Date getBirthday() {
 		return birthday;
 	}
@@ -407,6 +452,14 @@ public class User extends Model<User> {
 
 	public void setDepartment(String department) {
 		this.department = department;
+	}
+
+	public String getEmployeeNumber() {
+		return employeeNumber;
+	}
+
+	public void setEmployeeNumber(String employeeNumber) {
+		this.employeeNumber = employeeNumber;
 	}
 
 	public String getOriginalProvince() {
