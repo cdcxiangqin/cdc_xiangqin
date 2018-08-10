@@ -178,4 +178,29 @@ public class UserController {
         getUserResult=JsonUtil.toJSONString(resultMap);
         return getUserResult;
     }
+
+    /**
+     * @name: getOtherUser
+     * @description: 获取其他用户信息，搭配访问otheruserpage接口中使用
+     * @author: 纪佳鸿
+     * @time: 2018/8/10 17:44
+     */
+    @RequestMapping(value="/getOtherUser",produces="application/json;charset=UTF-8")
+    public String getOtherUser(@RequestBody Map<String,String> params,HttpServletRequest request){
+        String getUserResult=null;
+        User user=null;
+        String otherUsername=(String)request.getSession().getAttribute("otherUsername");
+        Map<String,String> inputMap=new HashMap<String,String>();
+        inputMap.put("username",otherUsername);
+        user=userService.getUser(inputMap);
+        Map resultMap=new HashMap();
+        if(null!=user){
+            resultMap.put("result","success");
+            resultMap.put("user",user);
+        }else{
+            resultMap.put("result","fail");
+        }
+        getUserResult=JsonUtil.toJSONString(resultMap);
+        return getUserResult;
+    }
 }
