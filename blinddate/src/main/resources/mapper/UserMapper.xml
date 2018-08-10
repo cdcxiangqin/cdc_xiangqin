@@ -11,6 +11,9 @@
 		<result column="sex" property="sex" />
 		<result column="mobile" property="mobile" />
 		<result column="birthday" property="birthday" />
+		<result column="age" property="age" />
+		<result column="zodiac" property="zodiac" />
+		<result column="constellation" property="constellation" />
 		<result column="folk" property="folk" />
 		<result column="height" property="height" />
 		<result column="weight" property="weight" />
