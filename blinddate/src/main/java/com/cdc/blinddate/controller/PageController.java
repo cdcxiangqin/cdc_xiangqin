@@ -28,4 +28,10 @@ public class PageController {
     @RequestMapping("/getText")
     @ResponseBody
     public String getText(){return "/resultText";}
+
+    @RequestMapping("/userpage")
+    public String userPage(){
+        System.out.println("userPage");
+        return "/user-page";
+    }
 }

@@ -73,9 +73,12 @@ $(function(){
 					// alert("发送请求失败！");
 					// },
 					success: function(data) {
-					// alert('提交成功！');
-					// alert(data.username);
-                        top.location.href="/index";
+                        var result = data.result;
+                        if ("success" == result) {
+                            top.location.href = "/index";
+                        } else {
+                            alert("用户名重复");
+						}
 					}
 				});
 			$(".input-val").val('');
