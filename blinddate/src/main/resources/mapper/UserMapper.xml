@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cdc.blinddate.mapper.UserMapper">
 
-	<!-- 通用查询映射结果2018-08-10 15:51:52 -->
+	<!-- 通用查询映射结果 -->
 	<resultMap id="BaseResultMap" type="com.cdc.blinddate.entity.User">
 		<id column="id" property="id" />
 		<result column="username" property="username" />
@@ -10,6 +10,9 @@
 		<result column="name" property="name" />
 		<result column="sex" property="sex" />
 		<result column="mobile" property="mobile" />
+		<result column="QQ" property="qq" />
+		<result column="WeChat" property="WeChat" />
+		<result column="email" property="email" />
 		<result column="birthday" property="birthday" />
 		<result column="age" property="age" />
 		<result column="zodiac" property="zodiac" />
@@ -22,6 +25,7 @@
 		<result column="housing_conditions" property="housingConditions" />
 		<result column="child" property="child" />
 		<result column="department" property="department" />
+		<result column="employee_number" property="employeeNumber" />
 		<result column="original_province" property="originalProvince" />
 		<result column="original_city" property="originalCity" />
 		<result column="current_province" property="currentProvince" />
