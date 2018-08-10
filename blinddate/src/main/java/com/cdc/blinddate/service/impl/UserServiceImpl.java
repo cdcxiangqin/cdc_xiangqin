@@ -26,14 +26,14 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
     @Override
     public User register(Map<String, String> params) {
-        User user=new User();
+        User user=null;
         String username=params.get("username");
         Wrapper<User> wrapper=new EntityWrapper<User>();
         wrapper.eq("username",username);
         user=this.selectOne(wrapper);
-        if(null!=user){
+        if(null!=user)
             return null;
-        }
+        user=new User();
         String password=params.get("password");
         String name=params.get("name");
         String sex=params.get("sex");
