@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cdc.blinddate.mapper.UserMapper">
 
-	<!-- 通用查询映射结果 -->
+	<!-- 通用查询映射结果2018-08-10 15:51:52 -->
 	<resultMap id="BaseResultMap" type="com.cdc.blinddate.entity.User">
 		<id column="id" property="id" />
 		<result column="username" property="username" />

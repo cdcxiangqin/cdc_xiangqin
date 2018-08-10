@@ -11,7 +11,7 @@ import java.io.Serializable;
  * </p>
  *
  * @author 纪佳鸿
- * @since 2018-08-10
+ * @since 2018-08-10 15:51:40
  */
 public class User extends Model<User> {
 
