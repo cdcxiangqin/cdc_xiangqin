@@ -22,10 +22,10 @@ $(document).ready(function() {
                 async:false,
                 data:JSON.stringify(authenticateCommand),
                 success:function(data){
-                    alert(JSON.stringify(data));
-                    alert("dsadasdsadsad");
-                    // window.open("http://www.baidu.com");
-                    // $(window).attr("location","/index");
+                    // alert(JSON.stringify(data));
+                    // alert("dsadasdsadsad");
+                    // // window.open("http://www.baidu.com");
+                    // // $(window).attr("location","/index");
                     top.location.href = "/index";
 
                 }
