@@ -9,6 +9,22 @@ $(document).ready(function () {
         window.location.href="/registerPage";
     })
 
+    //退出
+    $("#loginout").click(function () {
+        $.ajax({
+            url:"/user/unlogin",
+            type:"POST",
+            dataType:"json",
+            cache:false,
+            contentType: 'application/json;charset=utf-8',
+            async:false,
+            data:"{}",
+            success:function(data){
+                window.location.href="/signin";
+            }
+        })
+    })
+
     //登陆后跳回index页面
     $.ajax({
         url:"/user/getSelf",
@@ -75,6 +91,34 @@ $(document).ready(function () {
                $("#slide4").hide();
             }
 
+        }
+    })
+
+    // 请求推荐对象列表
+    $.ajax({
+        url:"/user/getUserList",
+        type:"POST",
+        dataType:"json",
+        cache:false,
+        contentType: 'application/json;charset=utf-8',
+        async:false,
+        data:"{}",
+        success:function(data){
+            // console.info(data);
+            var list = data.list;
+            var line = list.size;
+            if(line>=8) {
+                line = 8;
+            }
+            var i
+            for(var item in list){
+                $("#userdiv" + item).css("display","block");
+                 console.info(list[item].username);
+                $("#userdiv" + item+" .employeename").text(list[item].name);
+                $("#userdiv" + item+" .department-line").text(list[item].department);
+                $("#userdiv" + item+" .age-line").text(list[item].age);
+                $("#userdiv" + item+" .caption").attr("href","/otheruserpage?username="+list[item].username)
+            }
         }
     })
 });
