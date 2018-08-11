@@ -6,6 +6,7 @@ import com.cdc.blinddate.entity.User;
 import com.cdc.blinddate.mapper.UserMapper;
 import com.cdc.blinddate.service.UserService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
+import com.cdc.blinddate.util.JsonUtil;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -100,6 +101,34 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
                 user.setPopularity(user.getPopularity()+1);
                 this.updateById(user);
             }
+        }
+        return user;
+    }
+
+    @Override
+    public User modifyUser(Map<String, String> params) {
+        User user=null;
+        user=(User)JsonUtil.mapToObject(params,User.class);
+        //将不可被传值修改的字段赋值为null
+//        user.setUsername(null);
+        user.setPassword(null);
+        user.setName(null);
+        user.setSex(null);
+        user.setAge(null);
+        user.setZodiac(null);
+        user.setConstellation(null);
+        user.setHeadAddress(null);
+        user.setCreateTime(null);
+        user.setLastLoginTime(null);
+        user.setStatus(null);
+        user.setActivity(null);
+        user.setPopularity(null);
+
+        boolean updateResult=this.updateById(user);
+        if(true==updateResult){
+            user=this.selectById(user.getId());
+        }else{
+            user=null;
         }
         return user;
     }

@@ -755,4 +755,67 @@ public class User extends Model<User> {
 		return this.id;
 	}
 
+	@Override
+	public String toString() {
+		return "User{" +
+				"id='" + id + '\'' +
+				", username='" + username + '\'' +
+				", password='" + password + '\'' +
+				", name='" + name + '\'' +
+				", sex='" + sex + '\'' +
+				", mobile='" + mobile + '\'' +
+				", qq='" + qq + '\'' +
+				", WeChat='" + WeChat + '\'' +
+				", email='" + email + '\'' +
+				", birthday=" + birthday +
+				", age=" + age +
+				", zodiac='" + zodiac + '\'' +
+				", constellation='" + constellation + '\'' +
+				", folk='" + folk + '\'' +
+				", height=" + height +
+				", weight=" + weight +
+				", education='" + education + '\'' +
+				", university='" + university + '\'' +
+				", housingConditions='" + housingConditions + '\'' +
+				", child=" + child +
+				", department='" + department + '\'' +
+				", employeeNumber='" + employeeNumber + '\'' +
+				", originalProvince='" + originalProvince + '\'' +
+				", originalCity='" + originalCity + '\'' +
+				", currentProvince='" + currentProvince + '\'' +
+				", currentCity='" + currentCity + '\'' +
+				", hobby='" + hobby + '\'' +
+				", lifeAttitude='" + lifeAttitude + '\'' +
+				", headAddress='" + headAddress + '\'' +
+				", createTime=" + createTime +
+				", lastLoginTime=" + lastLoginTime +
+				", status='" + status + '\'' +
+				", activity=" + activity +
+				", popularity=" + popularity +
+				", hobbySport='" + hobbySport + '\'' +
+				", hobbyMusic='" + hobbyMusic + '\'' +
+				", hobbyVideo='" + hobbyVideo + '\'' +
+				", hobbyFood='" + hobbyFood + '\'' +
+				", hobbyPlace='" + hobbyPlace + '\'' +
+				", hobbyIdol='" + hobbyIdol + '\'' +
+				", hobbyPet='" + hobbyPet + '\'' +
+				", lifeSmoke='" + lifeSmoke + '\'' +
+				", lifeCook='" + lifeCook + '\'' +
+				", lifeDrink='" + lifeDrink + '\'' +
+				", lifeHousework='" + lifeHousework + '\'' +
+				", lifeDeposit='" + lifeDeposit + '\'' +
+				", lifeCar='" + lifeCar + '\'' +
+				", lifeBusy='" + lifeBusy + '\'' +
+				", marriageZodiacTaboo='" + marriageZodiacTaboo + '\'' +
+				", marriageConstellationTaboo='" + marriageConstellationTaboo + '\'' +
+				", marriageMarryTime='" + marriageMarryTime + '\'' +
+				", marriageWantChild='" + marriageWantChild + '\'' +
+				", marriageDatingSite='" + marriageDatingSite + '\'' +
+				", marriageEmotionalExperience='" + marriageEmotionalExperience + '\'' +
+				", marriageFamilyStatus='" + marriageFamilyStatus + '\'' +
+				", marriageParentsCondition='" + marriageParentsCondition + '\'' +
+				", marriageParentalEconomicStatus='" + marriageParentalEconomicStatus + '\'' +
+				", marriageSiblings='" + marriageSiblings + '\'' +
+				'}';
+	}
 }

@@ -22,4 +22,6 @@ public interface UserService extends IService<User> {
 	public List<User> getUserList(User user);
 
 	public User getUser(Map<String,String> params);
+
+	public User modifyUser(Map<String,String> params);
 }

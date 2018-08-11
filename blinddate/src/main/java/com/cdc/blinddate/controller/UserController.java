@@ -203,4 +203,35 @@ public class UserController {
         getUserResult=JsonUtil.toJSONString(resultMap);
         return getUserResult;
     }
+
+    /**
+     * @name: modifyUser
+     * @description: 修改用户信息
+     * @author: 纪佳鸿
+     * @time: 2018/8/11 17:19
+     */
+    @RequestMapping(value="/modifyUser",produces="application/json;charset=UTF-8")
+    public String modifyUser(@RequestBody Map<String,String> params,HttpServletRequest request){
+        String modifyUserResult=null;
+        Map resultMap=new HashMap();
+        User user=(User)request.getSession().getAttribute("user");
+        if(null!=user){
+            if(user.getUsername().equals(params.get("username"))){
+                params.put("id",user.getId());
+                params.put("username",user.getUsername());//防止什么都不传导致sql错误
+                user=userService.modifyUser(params);
+                if(null!=user){
+                    resultMap.put("result","success");
+                    request.getSession().setAttribute("user",user);
+                }else
+                    resultMap.put("result","fail");
+            }else{
+                resultMap.put("result","fail");
+            }
+        }else{
+            resultMap.put("result","fail");
+        }
+        modifyUserResult=JsonUtil.toJSONString(resultMap);
+        return modifyUserResult;
+    }
 }
