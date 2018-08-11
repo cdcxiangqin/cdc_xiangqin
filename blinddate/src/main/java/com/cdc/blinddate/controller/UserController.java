@@ -11,10 +11,9 @@ import com.cdc.blinddate.service.UserService;
 import com.cdc.blinddate.util.JsonUtil;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.util.ClassUtils;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -233,5 +232,26 @@ public class UserController {
         }
         modifyUserResult=JsonUtil.toJSONString(resultMap);
         return modifyUserResult;
+    }
+
+    @RequestMapping(value="/uploadHeadImg",method=RequestMethod.POST)//好像文件不能超过1M
+    public String uploadHeadImg(@RequestParam("file") MultipartFile file, HttpServletRequest request){
+        String uploadHeadImgResult=null;
+        User user=(User)request.getSession().getAttribute("user");
+        if(null!=user){
+            String baseDir=ClassUtils.getDefaultClassLoader().getResource("").getPath()+"static/";
+            String relativeDir="images/headPicture/";
+            String saveResult=this.userService.uploadHeadImg(file,user,baseDir,relativeDir);
+            uploadHeadImgResult=saveResult;
+            if(null!=saveResult){
+                request.getSession().setAttribute("user",user);
+            }
+//            System.out.println(saveResult);
+//            String resHeadPicPath= ClassUtils.getDefaultClassLoader().getResource("static/headPicture").getPath();
+//            System.out.println("resHeadPicPath:"+resHeadPicPath);
+        }else{
+        }
+
+        return uploadHeadImgResult;
     }
 }

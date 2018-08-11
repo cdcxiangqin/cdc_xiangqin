@@ -51,4 +51,10 @@ public class PageController {
         request.getSession().setAttribute("otherUsername",username);
         return "/otheruser-page";
     }
+
+    @RequestMapping("/testUploadPage")//测试上传图片用
+    public String testUploadPage() {
+        return "/testUpload";
+    }
+
 }
