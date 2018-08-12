@@ -51,4 +51,9 @@ public class PageController {
         request.getSession().setAttribute("otherUsername",username);
         return "/otheruser-page";
     }
+
+    @RequestMapping("/fixuserpage")
+    public String fixpage() {
+        return "/fix-userpage";
+    }
 }

@@ -145,3 +145,17 @@
 .user-page .nav #back:hover{
     background: rgba(81, 104, 117, 0.87) url(../images/noisy.png);
 }
+
+.user-page .nav #fix{
+    display: block;
+    margin: 0 auto;
+    width: 122px;
+    height: 33px;
+    line-height: 33px;
+    color: #fff;
+    border-radius: 5px;
+    background: #516875 url(../images/noisy.png);
+}
+.user-page .nav #fix:hover{
+    background: rgba(81, 104, 117, 0.87) url(../images/noisy.png);
+}
