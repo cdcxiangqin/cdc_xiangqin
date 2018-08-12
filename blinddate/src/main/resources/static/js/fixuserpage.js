@@ -60,7 +60,73 @@ $(document).ready(function () {
             $("#marriageSiblings").val(user.marriageSiblings);
 
         }
-    })
+    });
 
+    console.info("zhunbei");
+
+    $("#fixsave").click(function () {
+        console.info("请求fixsave");
+        var fixdata = {"name":$("#name").val(),
+                "username":$("#username").val(),
+                "department":$("#department").val(),
+                "height":$("#height").val(),
+                "weight":$("#weight").val(),
+                "constellation":$("#constellation").val(),
+                "mobile":$("#zmobile").val(),
+                "address":$("#address").val(),
+                "university":$("#university").val(),
+                // "height":$("#zheight").val(),
+                "marrystate":$("#marrystate").val(),
+                "zodiac":$("#zodiac").val(),
+                // "department":$("#zdepartment").val(),
+                // "birthday":$("#birthday").val(),
+                "age":$("#age").val(),
+                "employeeNumber":$("#employeeNumber").val(),
+                "weChat":$("#WeChat").val(),
+                "education":$("#education").val(),
+                "housingConditions":$("#housingConditions").val(),
+                "sex":$("#sex").val(),
+                "folk":$("#folk").val(),
+                // "constellation":$("#zconstellation").val(),
+                "child":$("#child").val(),
+                "hobbySport":$("#hobbySport").val(),
+                "hobbyMusic":$("#hobbyMusic").val(),
+                "hobbyVideo":$("#hobbyVideo").val(),
+                "hobbyFood":$("#hobbyFood").val(),
+                "hobbyPlace":$("#hobbyPlace").val(),
+                "hobbyIdol":$("#hobbyIdol").val(),
+                "hobbyPet":$("#hobbyPet").val(),
+                "lifeSmoke":$("#lifeSmoke").val(),
+                "lifeCook":$("#lifeCook").val(),
+                "lifeDrink":$("#lifeDrink").val(),
+                "lifeHousework":$("#lifeHousework").val(),
+                "lifeDeposit":$("#lifeDeposit").val(),
+                "lifeCar":$("#lifeCar").val(),
+                "lifeBusy":$("#lifeBusy").val(),
+                "marriageZodiacTaboo":$("#marriageZodiacTaboo").val(),
+                "marriageConstellationTaboo":$("#marriageConstellationTaboo").val(),
+                "marriageMarryTime":$("#marriageMarryTime").val(),
+                "marriageWantChild":$("#marriageWantChild").val(),
+                "marriageDatingSite":$("#marriageDatingSite").val(),
+                "marriageEmotionalExperience":$("#marriageEmotionalExperience").val(),
+                "marriageFamilyStatus":$("#marriageFamilyStatus").val(),
+                "marriageParentsCondition":$("#marriageParentsCondition").val(),
+                "marriageParentalEconomicStatus":$("#marriageParentalEconomicStatus").val(),
+                "marriageSiblings":$("#marriageSiblings").val(),
+            };
+
+                $.ajax({
+                    url:"/user/modifyUser",
+                    type:"POST",
+                    dataType:"json",
+                    cache:false,
+                    contentType: 'application/json;charset=utf-8',
+                    async:false,
+                    data: JSON.stringify(fixdata),
+                    success:function(data){
+                        top.location.href = "/userpage";
+                    }
+            })
+        });
 
 });

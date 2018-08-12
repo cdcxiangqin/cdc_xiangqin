@@ -24,7 +24,7 @@
             <div class="nav-collapse collapse">
                 <div class="nav">
                     <a id="back" href="/index">回到首页 →</a>
-                    <a id="fix">保存个人资料 →</a>
+                    <button type="button" id="fixsave">保存个人资料 →</button>
                 </div>
             </div>
         </div>
@@ -44,15 +44,14 @@
                             </div>
                         </div>
                         <div class="span8">
-
                             <div id="contact">
                                 <ul class="top-info-list">
-                                    <li class="top-info-item">昵称：<span><input type="text" id="username" class="item-value" size="5">金牛座</input></span></li>
-                                    <li class="top-info-item">姓名：<span><input type="text" id="name" class="item-value" size="5">金牛座</input></span></li>
-                                    <li class="top-info-item">部门：<span><input type="text" id="department" class="item-value" size="5">金牛座</input></span></li>
-                                    <li class="top-info-item">身高：<span><input type="text" id="height" class="item-value" size="5">金牛座</input></span> cm</li>
-                                    <li class="top-info-item">体重：<span><input type="text" id="weight" class="item-value" size="5">金牛座</input></span> kg</li>
-                                    <li class="top-info-item">星座：<span><input type="text" id="constellation" class="item-value" size="5">金牛座</input></span></li>
+                                    <li class="top-info-item">昵称：<input type="text" id="username" class="item-value"></li>
+                                    <li class="top-info-item">姓名：<input type="text" id="name" class="item-value"></li>
+                                    <li class="top-info-item">部门：<input type="text" id="department" class="item-value"></li>
+                                    <li class="top-info-item">身高：<input type="text" id="height" class="item-value"> cm</li>
+                                    <li class="top-info-item">体重：<input type="text" id="weight" class="item-value"> kg</li>
+                                    <li class="top-info-item">星座：<input type="text" id="constellation" class="item-value"></li>
                                 </ul>
                                 <div class="mark-user-wrap"><button class="mark-user">关注</button><button class="marked-user">已关注</button></div>
                             </div>
@@ -81,23 +80,23 @@
             <div id="item1" class="item">
                 <h2>资料</h2>
                 <ul class="inform-list after">
-                    <li class="inform-item"><span class="key">手机号</span> <input id="zmobile" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">家庭住址</span> <input id="address" class="value"></input></li>
-                    <li class="inform-item"><span class="key">毕业院校</span> <input id="university" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">身高</span> <input id="zheight" class="value">金牛座</input> cm</li>
-                    <li class="inform-item"><span class="key">婚姻状态</span> <input id="marrystate" class="value"></input></li>
-                    <li class="inform-item"><span class="key">生肖</span> <input id="zodiac" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">部门</span> <input id="zdepartment" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">出生日期</span> <input id="birthday" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">年龄</span> <input id="age" class="value">金牛座</input>岁</li>
-                    <li class="inform-item"><span class="key">编号</span> <input id="employeeNumber" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">微信/QQ</span> <input id="WeChat" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">学历</span> <input id="education" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">住房条件</span> <input id="housingConditions" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">性别</span> <input id="sex" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">民族</span> <input id="folk" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">星座</span> <input id="zconstellation" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">是否有小孩</span> <input id="child" class="value">金牛座</input></li>
+                    <li class="inform-item"><span class="key">手机号</span> <input type="text" id="zmobile" class="item-value"></li>
+                    <li class="inform-item"><span class="key">家庭住址</span> <input type="text" id="address" class="item-value"></li>
+                    <li class="inform-item"><span class="key">毕业院校</span> <input type="text" id="university" class="item-value"></li>
+                    <li class="inform-item"><span class="key">身高</span> <input type="text" id="zheight" class="item-value"> cm</li>
+                    <li class="inform-item"><span class="key">婚姻状态</span> <input type="text" id="marrystate" class="item-value"></li>
+                    <li class="inform-item"><span class="key">生肖</span> <input type="text" id="zodiac" class="item-value"></li>
+                    <li class="inform-item"><span class="key">部门</span> <input type="text" id="zdepartment" class="item-value"></li>
+                    <li class="inform-item"><span class="key">出生日期</span> <input type="text" id="birthday" class="item-value"></li>
+                    <li class="inform-item"><span class="key">年龄</span> <input type="text" id="age" class="item-value"> 岁</li>
+                    <li class="inform-item"><span class="key">编号</span> <input type="text" id="employeeNumber" class="item-value"></li>
+                    <li class="inform-item"><span class="key">微信/QQ</span> <input type="text" id="WeChat" class="item-value"></li>
+                    <li class="inform-item"><span class="key">学历</span> <input type="text" id="education" class="item-value"></li>
+                    <li class="inform-item"><span class="key">住房条件</span> <input type="text" id="housingConditions" class="item-value"></li>
+                    <li class="inform-item"><span class="key">性别</span> <input type="text" id="sex" class="item-value"></li>
+                    <li class="inform-item"><span class="key">民族</span> <input type="text" id="folk" class="item-value"></li>
+                    <li class="inform-item"><span class="key">星座</span> <input type="text" id="zconstellation" class="item-value"></li>
+                    <li class="inform-item"><span class="key">是否有小孩</span> <input type="text" id="child" class="item-value"></li>
                 </ul>
                 <div class="focus-user"><h4 class="key">关注的人</h4>
                     <ul class="focus-list after">
@@ -112,41 +111,41 @@
             <div id="item2" class="item">
                 <h2>兴趣爱好</h2>
                 <ul class="after">
-                    <li class="inform-item"><span class="key">喜欢的运动</span> <input id="hobbySport" class="value">金牛座</input></li>
-                    <!--<li class="inform-item"><span class="key">喜欢的体育运动</span> <span id="mobile" class="value">XXX</span></li>-->
-                    <li class="inform-item"><span class="key">喜欢的音乐</span> <input id="hobbyMusic" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">喜欢的影视节目</span> <input id="hobbyVideo" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">喜欢的食物</span> <input id="hobbyFood" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">喜欢的地方</span> <input id="hobbyPlace" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">喜欢的偶像</span> <input id="hobbyIdol" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">喜欢的宠物</span> <input id="hobbyPet" class="value">金牛座</input></li>
+                    <li class="inform-item"><span class="key">喜欢的运动</span> <input type="text" id="hobbySport" class="item-value"></li>
+                    <!--<li class="inform-item"><span class="key">喜欢的体育运动</span> <span id="mobile" class="item-value">XXX</span></li>-->
+                    <li class="inform-item"><span class="key">喜欢的音乐</span> <input type="text" id="hobbyMusic" class="item-value"></li>
+                    <li class="inform-item"><span class="key">喜欢的影视</span> <input type="text" id="hobbyVideo" class="item-value"></li>
+                    <li class="inform-item"><span class="key">喜欢的食物</span> <input type="text" id="hobbyFood" class="item-value"></li>
+                    <li class="inform-item"><span class="key">喜欢的地方</span> <input type="text" id="hobbyPlace" class="item-value"></li>
+                    <li class="inform-item"><span class="key">喜欢的偶像</span> <input type="text" id="hobbyIdol" class="item-value"></li>
+                    <li class="inform-item"><span class="key">喜欢的宠物</span> <input type="text" id="hobbyPet" class="item-value"></li>
                 </ul>
             </div>
             <div id="item3" class="item">
                 <h2>生活态度</h2>
                 <ul class="after">
-                    <li class="inform-item"><span class="key">是否吸烟</span> <input id="lifeSmoke" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">厨艺</span> <input id="lifeCook" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">是否喝酒</span> <input id="lifeDrink" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">家务</span> <input id="lifeHousework" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">存款</span> <input id="lifeDeposit" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">是否购车</span> <input id="lifeCar" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">工作是否繁忙</span> <input id="lifeBusy" class="value">金牛座</input></li>
+                    <li class="inform-item"><span class="key">是否吸烟</span> <input type="text" id="lifeSmoke" class="item-value"></li>
+                    <li class="inform-item"><span class="key">厨艺</span> <input type="text" id="lifeCook" class="item-value"></li>
+                    <li class="inform-item"><span class="key">是否喝酒</span> <input type="text" id="lifeDrink" class="item-value"></li>
+                    <li class="inform-item"><span class="key">家务</span> <input type="text" id="lifeHousework" class="item-value"></li>
+                    <li class="inform-item"><span class="key">存款</span> <input type="text" id="lifeDeposit" class="item-value"></li>
+                    <li class="inform-item"><span class="key">是否购车</span> <input type="text" id="lifeCar" class="item-value"></li>
+                    <li class="inform-item"><span class="key">工作是否繁忙</span> <input type="text" id="lifeBusy" class="item-value"></li>
                 </ul>
             </div>
             <div id="item4" class="item">
                 <h2>婚姻观</h2>
                 <ul class="after">
-                    <li class="inform-item"><span class="key">是否有生肖忌讳</span> <input id="marriageZodiacTaboo" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">是否有星座忌讳</span> <input id="marriageConstellationTaboo" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">想何时结婚</span> <input id="marriageMarryTime" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">是否想要小孩</span> <input id="marriageWantChild" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">喜欢在哪里约会</span> <input id="marriageDatingSite" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">婚恋史</span> <input id="marriageEmotionalExperience" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">家庭状况</span> <input id="marriageFamilyStatus" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">父母状况</span> <input id="marriageParentsCondition" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">父母经济状况</span> <input id="marriageParentalEconomicStatus" class="value">金牛座</input></li>
-                    <li class="inform-item"><span class="key">是否有兄弟姐妹</span> <input id="marriageSiblings" class="value">金牛座</input></li>
+                    <li class="inform-item"><span class="key">是否有生肖忌讳</span> <input type="text" id="marriageZodiacTaboo" class="item-value"></li>
+                    <li class="inform-item"><span class="key">是否有星座忌讳</span> <input type="text" id="marriageConstellationTaboo" class="item-value"></li>
+                    <li class="inform-item"><span class="key">想何时结婚</span> <input type="text" id="marriageMarryTime" class="item-value"></li>
+                    <li class="inform-item"><span class="key">是否想要小孩</span> <input type="text" id="marriageWantChild" class="item-value"></li>
+                    <li class="inform-item"><span class="key">喜欢在哪里约会</span> <input type="text" id="marriageDatingSite" class="item-value"></li>
+                    <li class="inform-item"><span class="key">婚恋史</span> <input type="text" id="marriageEmotionalExperience" class="item-value"></li>
+                    <li class="inform-item"><span class="key">家庭状况</span> <input type="text" id="marriageFamilyStatus" class="item-value"></li>
+                    <li class="inform-item"><span class="key">父母状况</span> <input type="text" id="marriageParentsCondition" class="item-value"></li>
+                    <li class="inform-item"><span class="key">父母经济状况</span> <input type="text" id="marriageParentalEconomicStatus" class="item-value"></li>
+                    <li class="inform-item"><span class="key">是否有兄弟姐妹</span> <input type="text" id="marriageSiblings" class="item-value"></li>
                 </ul>
             </div>
             <div id="item5" class="item">

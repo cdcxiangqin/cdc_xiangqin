@@ -20,9 +20,17 @@
     width: 30%;
     height: 48px;
     line-height: 48px;
-    font-size: 22px;
+    /*font-size: 22px;*/
+    font-size: 17px;
+
 }
-.top-info-item .item-value{
+.top-info-item input.item-value{
+    width: 105px;
+    height: 20px;
+    margin: 0;
+    padding: 2px;
+}
+.top-info-item item-value{
     padding:6px 12px;
     border-radius: 2px;
     font-size: 18px;
@@ -58,11 +66,29 @@
     text-align: left;
 }
 #content .inform-item{
-    width: 30%;
-    height: 32px;
-    line-height: 32px;
+    /*width: 30%;*/
+    /*height: 32px;*/
+    /*line-height: 32px;*/
+    /*float: left;*/
+    /*font-weight: bold;*/
     float: left;
-    font-weight: bold;
+    width: 30%;
+    height: 48px;
+    line-height: 48px;
+    /*font-size: 22px;*/
+    font-size: 17px;
+}
+#content input.item-value{
+    width: 105px;
+    height: 20px;
+    margin: 0;
+    padding: 2px;
+}
+#content item-value{
+    padding:6px 12px;
+    border-radius: 2px;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.82);
 }
 #content .key{
     color: rgba(33, 20, 28, 0.5);
@@ -129,6 +155,60 @@
 /*详细资料 结束*/
 
 /*导航栏*/
+/*.user-page .nav{*/
+/*text-align: center;*/
+/*}*/
+/*.user-page .nav #a1{*/
+/*width: 20px;*/
+/*height: 20px;*/
+/*padding-left: 300px;*/
+/*padding-bottom: 5px;*/
+/*}*/
+/*.user-page .nav #a2{*/
+/*width: 20px;*/
+/*height: 20px;*/
+/*padding-right: 300px;*/
+/*padding-bottom: 5px;*/
+/*}*/
+/*.user-page .nav #back1{*/
+/*display: block;*/
+/*!*margin: 0 auto;*!*/
+/*margin:10px 600px 5px 100px;*/
+/*width: 122px;*/
+/*height: 33px;*/
+/*line-height: 33px;*/
+/*color: #fff;*/
+/*border-radius: 5px;*/
+/*background: #516875 url(../images/noisy.png);*/
+/*}*/
+/*.user-page .nav #back2{*/
+/*display: block;*/
+/*!*margin: 0 auto;*!*/
+/*margin:10px 100px 5px 600px;*/
+/*width: 122px;*/
+/*height: 33px;*/
+/*line-height: 33px;*/
+/*color: #fff;*/
+/*border-radius: 5px;*/
+/*background: #516875 url(../images/noisy.png);*/
+/*}*/
+/*.user-page .nav #back:hover{*/
+/*background: rgba(81, 104, 117, 0.87) url(../images/noisy.png);*/
+/*}*/
+
+/*!*.user-page .nav #fix{*!*/
+/*!*display: block;*!*/
+/*!*margin: 0 auto;*!*/
+/*!*width: 122px;*!*/
+/*!*height: 33px;*!*/
+/*!*line-height: 33px;*!*/
+/*!*color: #fff;*!*/
+/*!*border-radius: 5px;*!*/
+/*!*background: #516875 url(../images/noisy.png);*!*/
+/*!*}*!*/
+/*!*.user-page .nav #fix:hover{*!*/
+/*!*background: rgba(81, 104, 117, 0.87) url(../images/noisy.png);*!*/
+/*!*}*!*/
 .user-page .nav{
     text-align: center;
 }
