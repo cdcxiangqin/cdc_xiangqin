@@ -1,10 +1,12 @@
 package com.cdc.blinddate.entity;
 
-import java.util.Comparator;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * <p>
@@ -824,10 +826,13 @@ public class User extends Model<User> implements Comparable {
 	public int compareTo(Object o) {
 		User u1=(User)this;
 		User u2=(User)o;
-		if((u1.getActivity()+u1.getPopularity())>=(u2.getActivity()+u2.getPopularity())){
+		if((u1.getActivity()+u1.getPopularity())>(u2.getActivity()+u2.getPopularity())){
 			return 1;
-		}else{
+		}else if((u1.getActivity()+u1.getPopularity())==(u2.getActivity()+u2.getPopularity())){
 			return 0;
+		}else{
+			return -1;
 		}
 	}
+
 }

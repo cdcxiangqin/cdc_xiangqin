@@ -84,6 +84,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         }
         list=this.selectList(wrapper);
         Collections.sort(list);
+        Collections.reverse(list);
         list=list.subList(0,(list.size()>8?8:list.size()));
         list.forEach(u -> u.setPassword(null));
         return list;
