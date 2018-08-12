@@ -2,6 +2,7 @@ package com.cdc.blinddate.service;
 
 import com.cdc.blinddate.entity.User;
 import com.baomidou.mybatisplus.service.IService;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 import java.util.Map;
@@ -24,4 +25,6 @@ public interface UserService extends IService<User> {
 	public User getUser(Map<String,String> params);
 
 	public User modifyUser(Map<String,String> params);
+
+	public String uploadHeadImg(MultipartFile file,User user,String baseDir,String relativeDir);
 }

@@ -6,8 +6,10 @@ import com.cdc.blinddate.entity.User;
 import com.cdc.blinddate.mapper.UserMapper;
 import com.cdc.blinddate.service.UserService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
+import com.cdc.blinddate.util.FileUtil;
 import com.cdc.blinddate.util.JsonUtil;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Date;
 import java.util.List;
@@ -131,5 +133,26 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             user=null;
         }
         return user;
+    }
+
+    @Override
+    public String uploadHeadImg(MultipartFile file,User user,String baseDir,String relativeDir) {
+//        String contentType=file.getContentType();
+        String fileName=file.getOriginalFilename();
+        String uuid=UUID.randomUUID().toString().replace("-","");
+        fileName=uuid+fileName.substring(fileName.lastIndexOf('.'));
+        String fullDir=baseDir+relativeDir;
+        String relativePath=null;
+        try {
+            FileUtil.uploadFile(file.getBytes(),fullDir,fileName);
+            relativePath=relativeDir+fileName;
+            //在这里保存成功后可以把user里面以前保存的图片删掉或者其他操作
+            user.setHeadAddress(relativePath);
+            this.updateById(user);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+        return relativePath;
     }
 }
