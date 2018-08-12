@@ -78,7 +78,6 @@ public class PageController {
             if(null!=saveResult){
                 request.getSession().setAttribute("user",user);
             }
-        }else{
         }
 
         return "/userpage";
