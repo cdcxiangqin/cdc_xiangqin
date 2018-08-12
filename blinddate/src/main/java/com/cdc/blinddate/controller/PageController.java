@@ -1,15 +1,20 @@
 package com.cdc.blinddate.controller;
 
+import com.cdc.blinddate.entity.User;
+import com.cdc.blinddate.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.util.ClassUtils;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
 @Controller
 public class PageController {
+    @Autowired
+    private UserService userService;
 
     @RequestMapping("/registerPage")
     public String registerPage(){
@@ -55,6 +60,23 @@ public class PageController {
     @RequestMapping("/testUploadPage")//测试上传图片用
     public String testUploadPage() {
         return "/testUpload";
+    }
+
+    @RequestMapping(value="/uploadHeadImg",method= RequestMethod.POST)//好像文件不能超过1M
+    public String uploadHeadImg(@RequestParam("file") MultipartFile file, HttpServletRequest request){
+        String uploadHeadImgResult=null;
+        User user=(User)request.getSession().getAttribute("user");
+        if(null!=user){
+            String baseDir= ClassUtils.getDefaultClassLoader().getResource("").getPath()+"static/";
+            String relativeDir="images/headPicture/";
+            String saveResult=this.userService.uploadHeadImg(file,user,baseDir,relativeDir);
+            if(null!=saveResult){
+                request.getSession().setAttribute("user",user);
+            }
+        }else{
+        }
+
+        return "/userpage";
     }
 
 }

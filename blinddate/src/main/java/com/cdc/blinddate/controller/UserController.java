@@ -234,6 +234,12 @@ public class UserController {
         return modifyUserResult;
     }
 
+    /**
+     * @name: uploadHeadImg
+     * @description: 上传头像 返回新地址
+     * @author: 纪佳鸿
+     * @time: 2018/8/12 17:07
+     */
     @RequestMapping(value="/uploadHeadImg",method=RequestMethod.POST)//好像文件不能超过1M
     public String uploadHeadImg(@RequestParam("file") MultipartFile file, HttpServletRequest request){
         String uploadHeadImgResult=null;
@@ -246,12 +252,8 @@ public class UserController {
             if(null!=saveResult){
                 request.getSession().setAttribute("user",user);
             }
-//            System.out.println(saveResult);
-//            String resHeadPicPath= ClassUtils.getDefaultClassLoader().getResource("static/headPicture").getPath();
-//            System.out.println("resHeadPicPath:"+resHeadPicPath);
         }else{
         }
-
         return uploadHeadImgResult;
     }
 }
