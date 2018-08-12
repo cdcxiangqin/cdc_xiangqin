@@ -1,4 +1,9 @@
 $(document).ready(function () {
+
+    $("#loadpic").click(function () {
+        window.location.href = "/testUploadPage";
+    });
+
     $.ajax({
         url:"/user/getSelf",
         type:"POST",
@@ -57,6 +62,7 @@ $(document).ready(function () {
             $("#marriageParentsCondition").text(user.marriageParentsCondition);
             $("#marriageParentalEconomicStatus").text(user.marriageParentalEconomicStatus);
             $("#marriageSiblings").text(user.marriageSiblings);
+            $("#headpic").attr("src", user.headAddress);
 
         }
     })

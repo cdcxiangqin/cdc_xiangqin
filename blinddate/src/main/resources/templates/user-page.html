@@ -40,19 +40,24 @@
                         <div class="span4">
                             <div class="get-us">
                                 <!--用户头像-->
-                                <img src="images/test.jpeg">
+                                <img id="headpic" src="images/test.jpeg">
+                                <button id="loadpic" class="btn-block">修改头像</button>
+                                <!--<form enctype="multipart/form-data" method="post" action="/user/uploadHeadImg">-->
+                                    <!--图片<input type="file" name="file"/>-->
+                                    <!--<input type="submit" value="上传"/>-->
+                                <!--</form>-->
                             </div>
                         </div>
                         <div class="span8">
 
                             <div id="contact">
                                 <ul class="top-info-list">
-                                    <li class="top-info-item">昵称：<span id="username" class="item-value">金牛座</span></li>
-                                    <li class="top-info-item">姓名：<span id="name" class="item-value">金牛座</span></li>
-                                    <li class="top-info-item">部门：<span id="department" class="item-value">金牛座</span></li>
-                                    <li class="top-info-item">身高：<span id="height" class="item-value">金牛座</span> cm</li>
-                                    <li class="top-info-item">体重：<span id="weight" class="item-value">金牛座</span> kg</li>
-                                    <li class="top-info-item">星座：<span id="constellation" class="item-value">金牛座</span></li>
+                                    <li class="top-info-item">昵称：<span id="username" class="item-value"></span></li>
+                                    <li class="top-info-item">姓名：<span id="name" class="item-value"></span></li>
+                                    <li class="top-info-item">部门：<span id="department" class="item-value"></span></li>
+                                    <li class="top-info-item">身高：<span id="height" class="item-value"></span> cm</li>
+                                    <li class="top-info-item">体重：<span id="weight" class="item-value"></span> kg</li>
+                                    <li class="top-info-item">星座：<span id="constellation" class="item-value"></span></li>
                                 </ul>
                                 <div class="mark-user-wrap"><button class="mark-user">关注</button><button class="marked-user">已关注</button></div>
                             </div>
@@ -81,23 +86,23 @@
             <div id="item1" class="item">
                 <h2>资料</h2>
                 <ul class="inform-list after">
-                    <li class="inform-item"><span class="key">手机号</span> <span id="zmobile" class="value">金牛座</span></li>
+                    <li class="inform-item"><span class="key">手机号</span> <span id="zmobile" class="value"></span></li>
                     <li class="inform-item"><span class="key">家庭住址</span> <span id="address" class="value"></span></li>
-                    <li class="inform-item"><span class="key">毕业院校</span> <span id="university" class="value">金牛座</span></li>
-                    <li class="inform-item"><span class="key">身高</span> <span id="zheight" class="value">金牛座</span> cm</li>
+                    <li class="inform-item"><span class="key">毕业院校</span> <span id="university" class="value"></span></li>
+                    <li class="inform-item"><span class="key">身高</span> <span id="zheight" class="value"></span> cm</li>
                     <li class="inform-item"><span class="key">婚姻状态</span> <span id="marrystate" class="value"></span></li>
-                    <li class="inform-item"><span class="key">生肖</span> <span id="zodiac" class="value">金牛座</span></li>
-                    <li class="inform-item"><span class="key">部门</span> <span id="zdepartment" class="value">金牛座</span></li>
-                    <li class="inform-item"><span class="key">出生日期</span> <span id="birthday" class="value">金牛座</span></li>
-                    <li class="inform-item"><span class="key">年龄</span> <span id="age" class="value">金牛座</span>岁</li>
-                    <li class="inform-item"><span class="key">编号</span> <span id="employeeNumber" class="value">金牛座</span></li>
-                    <li class="inform-item"><span class="key">微信/QQ</span> <span id="WeChat" class="value">金牛座</span></li>
-                    <li class="inform-item"><span class="key">学历</span> <span id="education" class="value">金牛座</span></li>
-                    <li class="inform-item"><span class="key">住房条件</span> <span id="housingConditions" class="value">金牛座</span></li>
-                    <li class="inform-item"><span class="key">性别</span> <span id="sex" class="value">金牛座</span></li>
-                    <li class="inform-item"><span class="key">民族</span> <span id="folk" class="value">金牛座</span></li>
-                    <li class="inform-item"><span class="key">星座</span> <span id="zconstellation" class="value">金牛座</span></li>
-                    <li class="inform-item"><span class="key">是否有小孩</span> <span id="child" class="value">金牛座</span></li>
+                    <li class="inform-item"><span class="key">生肖</span> <span id="zodiac" class="value"></span></li>
+                    <li class="inform-item"><span class="key">部门</span> <span id="zdepartment" class="value"></span></li>
+                    <li class="inform-item"><span class="key">出生日期</span> <span id="birthday" class="value"></span></li>
+                    <li class="inform-item"><span class="key">年龄</span> <span id="age" class="value"></span>岁</li>
+                    <li class="inform-item"><span class="key">编号</span> <span id="employeeNumber" class="value"></span></li>
+                    <li class="inform-item"><span class="key">微信/QQ</span> <span id="WeChat" class="value"></span></li>
+                    <li class="inform-item"><span class="key">学历</span> <span id="education" class="value"></span></li>
+                    <li class="inform-item"><span class="key">住房条件</span> <span id="housingConditions" class="value"></span></li>
+                    <li class="inform-item"><span class="key">性别</span> <span id="sex" class="value"></span></li>
+                    <li class="inform-item"><span class="key">民族</span> <span id="folk" class="value"></span></li>
+                    <li class="inform-item"><span class="key">星座</span> <span id="zconstellation" class="value"></span></li>
+                    <li class="inform-item"><span class="key">是否有小孩</span> <span id="child" class="value"></span></li>
                 </ul>
                 <div class="focus-user"><h4 class="key">关注的人</h4>
                     <ul class="focus-list after">
@@ -112,41 +117,41 @@
             <div id="item2" class="item">
                 <h2>兴趣爱好</h2>
                 <ul class="after">
-                    <li class="inform-item"><span class="key">喜欢的运动</span> <span id="hobbySport" class="value">金牛座</span></li>
+                    <li class="inform-item"><span class="key">喜欢的运动</span> <span id="hobbySport" class="value"></span></li>
                     <!--<li class="inform-item"><span class="key">喜欢的体育运动</span> <span id="mobile" class="value">XXX</span></li>-->
-                    <li class="inform-item"><span class="key">喜欢的音乐</span> <span id="hobbyMusic" class="value">金牛座</span></li>
-                    <li class="inform-item"><span class="key">喜欢的影视节目</span> <span id="hobbyVideo" class="value">金牛座</span></li>
-                    <li class="inform-item"><span class="key">喜欢的食物</span> <span id="hobbyFood" class="value">金牛座</span></li>
-                    <li class="inform-item"><span class="key">喜欢的地方</span> <span id="hobbyPlace" class="value">金牛座</span></li>
-                    <li class="inform-item"><span class="key">喜欢的偶像</span> <span id="hobbyIdol" class="value">金牛座</span></li>
-                    <li class="inform-item"><span class="key">喜欢的宠物</span> <span id="hobbyPet" class="value">金牛座</span></li>
+                    <li class="inform-item"><span class="key">喜欢的音乐</span> <span id="hobbyMusic" class="value"></span></li>
+                    <li class="inform-item"><span class="key">喜欢的影视节目</span> <span id="hobbyVideo" class="value"></span></li>
+                    <li class="inform-item"><span class="key">喜欢的食物</span> <span id="hobbyFood" class="value"></span></li>
+                    <li class="inform-item"><span class="key">喜欢的地方</span> <span id="hobbyPlace" class="value"></span></li>
+                    <li class="inform-item"><span class="key">喜欢的偶像</span> <span id="hobbyIdol" class="value"></span></li>
+                    <li class="inform-item"><span class="key">喜欢的宠物</span> <span id="hobbyPet" class="value"></span></li>
                 </ul>
             </div>
             <div id="item3" class="item">
                 <h2>生活态度</h2>
                 <ul class="after">
-                    <li class="inform-item"><span class="key">是否吸烟</span> <span id="lifeSmoke" class="value">金牛座</span></li>
-                    <li class="inform-item"><span class="key">厨艺</span> <span id="lifeCook" class="value">金牛座</span></li>
-                    <li class="inform-item"><span class="key">是否喝酒</span> <span id="lifeDrink" class="value">金牛座</span></li>
-                    <li class="inform-item"><span class="key">家务</span> <span id="lifeHousework" class="value">金牛座</span></li>
-                    <li class="inform-item"><span class="key">存款</span> <span id="lifeDeposit" class="value">金牛座</span></li>
-                    <li class="inform-item"><span class="key">是否购车</span> <span id="lifeCar" class="value">金牛座</span></li>
-                    <li class="inform-item"><span class="key">工作是否繁忙</span> <span id="lifeBusy" class="value">金牛座</span></li>
+                    <li class="inform-item"><span class="key">是否吸烟</span> <span id="lifeSmoke" class="value"></span></li>
+                    <li class="inform-item"><span class="key">厨艺</span> <span id="lifeCook" class="value"></span></li>
+                    <li class="inform-item"><span class="key">是否喝酒</span> <span id="lifeDrink" class="value"></span></li>
+                    <li class="inform-item"><span class="key">家务</span> <span id="lifeHousework" class="value"></span></li>
+                    <li class="inform-item"><span class="key">存款</span> <span id="lifeDeposit" class="value"></span></li>
+                    <li class="inform-item"><span class="key">是否购车</span> <span id="lifeCar" class="value"></span></li>
+                    <li class="inform-item"><span class="key">工作是否繁忙</span> <span id="lifeBusy" class="value"></span></li>
                 </ul>
             </div>
             <div id="item4" class="item">
                 <h2>婚姻观</h2>
                 <ul class="after">
-                    <li class="inform-item"><span class="key">是否有生肖忌讳</span> <span id="marriageZodiacTaboo" class="value">金牛座</span></li>
-                    <li class="inform-item"><span class="key">是否有星座忌讳</span> <span id="marriageConstellationTaboo" class="value">金牛座</span></li>
-                    <li class="inform-item"><span class="key">想何时结婚</span> <span id="marriageMarryTime" class="value">金牛座</span></li>
-                    <li class="inform-item"><span class="key">是否想要小孩</span> <span id="marriageWantChild" class="value">金牛座</span></li>
-                    <li class="inform-item"><span class="key">喜欢在哪里约会</span> <span id="marriageDatingSite" class="value">金牛座</span></li>
-                    <li class="inform-item"><span class="key">婚恋史</span> <span id="marriageEmotionalExperience" class="value">金牛座</span></li>
-                    <li class="inform-item"><span class="key">家庭状况</span> <span id="marriageFamilyStatus" class="value">金牛座</span></li>
-                    <li class="inform-item"><span class="key">父母状况</span> <span id="marriageParentsCondition" class="value">金牛座</span></li>
-                    <li class="inform-item"><span class="key">父母经济状况</span> <span id="marriageParentalEconomicStatus" class="value">金牛座</span></li>
-                    <li class="inform-item"><span class="key">是否有兄弟姐妹</span> <span id="marriageSiblings" class="value">金牛座</span></li>
+                    <li class="inform-item"><span class="key">是否有生肖忌讳</span> <span id="marriageZodiacTaboo" class="value"></span></li>
+                    <li class="inform-item"><span class="key">是否有星座忌讳</span> <span id="marriageConstellationTaboo" class="value"></span></li>
+                    <li class="inform-item"><span class="key">想何时结婚</span> <span id="marriageMarryTime" class="value"></span></li>
+                    <li class="inform-item"><span class="key">是否想要小孩</span> <span id="marriageWantChild" class="value"></span></li>
+                    <li class="inform-item"><span class="key">喜欢在哪里约会</span> <span id="marriageDatingSite" class="value"></span></li>
+                    <li class="inform-item"><span class="key">婚恋史</span> <span id="marriageEmotionalExperience" class="value"></span></li>
+                    <li class="inform-item"><span class="key">家庭状况</span> <span id="marriageFamilyStatus" class="value"></span></li>
+                    <li class="inform-item"><span class="key">父母状况</span> <span id="marriageParentsCondition" class="value"></span></li>
+                    <li class="inform-item"><span class="key">父母经济状况</span> <span id="marriageParentalEconomicStatus" class="value"></span></li>
+                    <li class="inform-item"><span class="key">是否有兄弟姐妹</span> <span id="marriageSiblings" class="value"></span></li>
                 </ul>
             </div>
             <div id="item5" class="item">

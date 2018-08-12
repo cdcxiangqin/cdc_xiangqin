@@ -114,10 +114,12 @@ $(document).ready(function () {
             for(var item in list){
                 $("#userdiv" + item).css("display","block");
                  console.info(list[item].username);
-                $("#userdiv" + item+" .employeename").text(list[item].name);
-                $("#userdiv" + item+" .department-line").text(list[item].department);
-                $("#userdiv" + item+" .age-line").text(list[item].age);
-                $("#userdiv" + item+" .caption").attr("href","/otheruserpage?username="+list[item].username)
+                $("#userdiv" + item+" .employeename").text("姓名：" +list[item].name);
+                $("#userdiv" + item+" .department-line").text("部门：" +list[item].department);
+                $("#userdiv" + item+" .age-line").text("年龄：" + list[item].age);
+                $("#userdiv" + item+" .caption").attr("href","/otheruserpage?username="+list[item].username);
+                $("#userdiv" + item+" .listpic").attr("src",list[item].headAddress);
+                $("#userdiv" + item+" .apic").attr("href",list[item].headAddress);
             }
         }
     })
