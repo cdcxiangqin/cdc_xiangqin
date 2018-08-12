@@ -57,6 +57,11 @@ public class PageController {
         return "/otheruser-page";
     }
 
+    @RequestMapping("/fixuserpage")
+    public String fixpage() {
+        return "/fix-userpage";
+    }
+
     @RequestMapping("/testUploadPage")//测试上传图片用
     public String testUploadPage() {
         return "/testUpload";

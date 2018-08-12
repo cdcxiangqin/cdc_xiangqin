@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/blinddate/blinddate.iml" filepath="$PROJECT_DIR$/blinddate/blinddate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blinddate/blinddate.iml" filepath="$PROJECT_DIR$/blinddate/blinddate.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/cdc_xiangqin.iml" filepath="$PROJECT_DIR$/.idea/cdc_xiangqin.iml" />
     </modules>
   </component>
