@@ -80,7 +80,7 @@ public class PageController {
             }
         }
 
-        return "/userpage";
+        return "/user-page";
     }
 
 }

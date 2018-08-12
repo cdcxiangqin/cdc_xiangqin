@@ -11,10 +11,7 @@ import com.cdc.blinddate.util.JsonUtil;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 /**
  * <p>
@@ -86,6 +83,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             wrapper.notIn("sex",sex);
         }
         list=this.selectList(wrapper);
+        Collections.sort(list);
+        list=list.subList(0,(list.size()>8?8:list.size()));
         list.forEach(u -> u.setPassword(null));
         return list;
     }

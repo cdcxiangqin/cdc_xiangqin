@@ -1,5 +1,6 @@
 package com.cdc.blinddate.entity;
 
+import java.util.Comparator;
 import java.util.Date;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
@@ -13,7 +14,7 @@ import java.io.Serializable;
  * @author 纪佳鸿
  * @since 2018-08-10
  */
-public class User extends Model<User> {
+public class User extends Model<User> implements Comparable {
 
     private static final long serialVersionUID = 1L;
 
@@ -817,5 +818,16 @@ public class User extends Model<User> {
 				", marriageParentalEconomicStatus='" + marriageParentalEconomicStatus + '\'' +
 				", marriageSiblings='" + marriageSiblings + '\'' +
 				'}';
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		User u1=(User)this;
+		User u2=(User)o;
+		if((u1.getActivity()+u1.getPopularity())>=(u2.getActivity()+u2.getPopularity())){
+			return 1;
+		}else{
+			return 0;
+		}
 	}
 }
